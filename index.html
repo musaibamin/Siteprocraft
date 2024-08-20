@@ -1,18 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>SitePro Craft - Services</title>
+    <title>SitePro Craft</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         #typed-text-container {
             width: 100%;
-            min-height: 47px;
+			min-height:47px;
             height: auto;
             position: relative;
             overflow: hidden;
-            font-size: 9px;
+            font-size: 9px; /* Font size set to 9px */
         }
 
         #typed-text {
@@ -31,7 +31,7 @@
         #typed-text-container p {
             margin: 0;
             white-space: pre-wrap;
-            color: #0b7883;
+			color: #0b7883;
         }
 
         #typing-dots {
@@ -72,15 +72,16 @@
 
                 <!-- Nav -->
                 <nav id="nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li class="current"><a href="Services.html">Services</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="About Us.html">About Us</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="FAQ.html">FAQ</a></li>
-                    </ul>
-                </nav>
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="Services.html">Services</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li> <!-- New Portfolio link -->
+						<li><a href="About Us.html">About Us</a></li>
+						<li><a href="testimonials.html">Testimonials</a></li> <!-- New Testimonials link -->
+						<li><a href="FAQ.html">FAQ</a></li>
+					</ul>
+				</nav>
+				
 
             </header>
         </div>
@@ -90,14 +91,14 @@
             <div id="banner" class="box container">
                 <div class="row">
                     <div class="col-7 col-12-medium">
-                        <h2>Welcome to Our Services</h2>
+                        <h2>Hi. This is SiteProCraft.</h2>
                         <div id="typed-text-container">
                             <p id="typed-text">&nbsp;</p>
                         </div>
                     </div>
                     <div class="col-5 col-12-medium">
                         <ul>
-                            <li><a href="#main-wrapper" class="button large icon solid fa-arrow-circle-right">Explore Our Services</a></li>
+                            <li><a href="Services.html" class="button large icon solid fa-arrow-circle-right">Ok let's go</a></li>
                         </ul>
                     </div>
                 </div>
@@ -195,10 +196,10 @@
                                     <p><strong>Comprehensive Digital Solutions:</strong> Beyond websites, blogs, and videos, SitePro Craft offers a suite of additional services designed to enhance your online presence. From social media integration and SEO optimization to content creation and branding, we provide all the tools you need to succeed online. Our holistic approach ensures that every aspect of your digital strategy is aligned and working towards your goals.</p>
                                     <p><strong>Why Choose SitePro Craft?</strong></p>
                                     <p><strong>Tailored Solutions:</strong> We understand that every business and project is unique. That’s why we take the time to understand your specific needs and goals, crafting personalized solutions that deliver results. Whether you need a full-fledged website, a dynamic blog, or eye-catching video content, we tailor our services to help you achieve your objectives.</p>
-                                    <p><strong>Expertise Across Platforms:</strong> With a diverse skill set and experience across various digital platforms, our team is equipped to handle any project. From WordPress and Shopify to Adobe Premiere and Final Cut Pro, we have the tools and knowledge to deliver high-quality results.</p>
-                                    <p><strong>Dedicated Support:</strong> At SitePro Craft, we believe in building long-term relationships with our clients. We’re here to support you every step of the way, from initial consultation to post-launch maintenance. Our commitment to client satisfaction means you can rely on us to be responsive, proactive, and always focused on your success.</p>
+                                    <p><strong>Expertise Across Platforms:</strong> With a diverse skill set and experience across various digital platforms, our team is equipped to handle projects of any size and complexity. From start to finish, we bring our expertise to ensure that every aspect of your digital presence is optimized for success.</p>
+                                    <p><strong>Commitment to Quality:</strong> At SitePro Craft, quality is our top priority. We are committed to delivering high standards in every project we undertake, ensuring that you receive a final product that exceeds your expectations. Our attention to detail and dedication to excellence set us apart in the industry.</p>
                                 </div>
-                                <a id="read-more-btn" href="javascript:void(0);" class="button icon fa-arrow-circle-right">Read More</a>
+                                <button id="toggle-button">Continue Reading</button>
                             </section>
                         </div>
 
@@ -209,89 +210,45 @@
 
         <!-- Footer -->
         <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <header class="major">
-                    <h2>Questions or comments?</h2>
-                    <p>We'd love to hear from you</p>
-                </header>
+            <footer id="footer" class="container">
                 <div class="row">
                     <div class="col-6 col-12-medium">
+
+                        <!-- Footer Content -->
                         <section>
-                            <form method="post" action="#">
-                                <div class="row gtr-50">
-                                    <div class="col-6 col-12-small">
-                                        <input name="name" placeholder="Name" type="text" />
-                                    </div>
-                                    <div class="col-6 col-12-small">
-                                        <input name="email" placeholder="Email" type="text" />
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea name="message" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <a href="#" class="form-button-submit button icon solid fa-envelope">Send Message</a>
-                                    </div>
-                                </div>
-                            </form>
+                            <h3>Get in touch</h3>
+                            <p>Feel free to contact us if you have any questions or if you would like to get started on your next project.</p>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                            </ul>
                         </section>
+
                     </div>
                     <div class="col-6 col-12-medium">
+
+                        <!-- Footer Links -->
                         <section>
-                            <p>Erat lorem ipsum veroeros consequat magna tempus lorem ipsum consequat Phaselamet
-                                mollis tortor congue. Sed quis mauris sit amet magna accumsan tristique. Curabitur
-                                leo nibh, rutrum eu malesuada.</p>
-                            <div class="row">
-                                <div class="col-6 col-12-small">
-                                    <ul class="icons">
-                                        <li class="icon solid fa-home">
-                                            1234 Somewhere Road<br />
-                                            Nashville, TN 00000<br />
-                                            USA
-                                        </li>
-                                        <li class="icon solid fa-phone">(000) 000-0000</li>
-                                        <li class="icon solid fa-envelope"><a href="#">info@untitled.tld</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-6 col-12-small">
-                                    <ul class="icons">
-                                        <li class="icon brands fa-twitter"><a href="#">@untitled</a></li>
-                                        <li class="icon brands fa-instagram"><a href="#">instagram.com/untitled</a></li>
-                                        <li class="icon brands fa-dribbble"><a href="#">dribbble.com/untitled</a></li>
-                                        <li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <hr />
-                <div class="row">
-                    <div class="col-12">
-                        <section class="widget">
-                            <ul class="menu">
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Terms of Use</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Contact</a></li>
+                            <h3>Quick Links</h3>
+                            <ul class="links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="Services.html">Services</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="About Us.html">About Us</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="FAQ.html">FAQ</a></li>
                             </ul>
                         </section>
+
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div id="copyright">
-                            <ul class="menu">
-                                <li>&copy; Untitled. All rights reserved</li>
-                                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </footer>
         </div>
 
     </div>
 
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
@@ -299,28 +256,63 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        var typedTextContainer = document.getElementById("typed-text-container");
-        var typedText = document.getElementById("typed-text");
-        var introText = document.getElementById("intro-text").innerText;
+        document.addEventListener("DOMContentLoaded", function() {
+            const textArray = [
+                "Welcome to SiteProCraft!",
+                "Your trusted partner in web development, software development, and API intergations.",
+                "We bring your ideas to life.",
+                "Creating stunning and functional websites.",
+                "Let's build something great together.",
+                "Crafting sites with passion and precision."
+            ];
+            let textIndex = 0;
+            let charIndex = 0;
+            const typingSpeed = 80; // typing speed in milliseconds
+            const erasingSpeed = 20; // erasing speed in milliseconds
+            const delayBetweenTexts = 1000; // delay between texts in milliseconds
+            const delayAfterErasing = 500; // delay after erasing in milliseconds
+            const typedTextElement = document.getElementById("typed-text");
 
-        function typeText(text, i) {
-            if (i < text.length) {
-                typedText.innerHTML += text.charAt(i);
-                setTimeout(function() {
-                    typeText(text, i + 1);
-                }, 20);
+            function type() {
+                if (charIndex < textArray[textIndex].length) {
+                    typedTextElement.textContent += textArray[textIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(erase, delayBetweenTexts);
+                }
             }
-        }
 
-        setTimeout(function() {
-            typeText(introText, 0);
-        }, 500);
+            function erase() {
+                if (charIndex > 0) {
+                    typedTextElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingSpeed);
+                } else {
+                    textIndex = (textIndex + 1) % textArray.length;
+                    setTimeout(type, delayAfterErasing);
+                }
+            }
 
-        document.getElementById("read-more-btn").onclick = function() {
-            var fullText = document.getElementById("full-text");
-            fullText.style.display = "block";
-            this.style.display = "none";
-        };
+            type(); // start the typing effect
+
+            // Toggle full text visibility
+            document.getElementById("toggle-button").addEventListener("click", function() {
+                const fullText = document.getElementById("full-text");
+                const introText = document.getElementById("intro-text");
+
+                if (fullText.style.display === "none") {
+                    fullText.style.display = "block";
+                    introText.style.display = "none";
+                    this.textContent = "Show Less";
+                } else {
+                    fullText.style.display = "none";
+                    introText.style.display = "block";
+                    this.textContent = "Continue Reading";
+                }
+            });
+        });
     </script>
+
 </body>
 </html>
