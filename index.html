@@ -238,12 +238,11 @@
                                     <p>Our Services:</p>
                                     <p><strong>Custom Website Design & Development:</strong> Your website is often the first impression customers have of your business, so it needs to be professional, functional, and visually appealing. At SitePro Craft, we create custom websites that are not only aesthetically pleasing but also fully responsive, ensuring they look great on any device. From e-commerce sites to portfolios and corporate websites, we tailor each project to meet your specific needs and goals.</p>
                                     <p><strong>Blog Creation & Management:</strong> Blogging is a powerful tool for engaging your audience, sharing expertise, and boosting your SEO. Our team can help you create a dynamic and engaging blog that aligns with your brand’s voice and objectives. We handle everything from design and layout to content strategy, ensuring your blog not only attracts readers but also keeps them coming back for more.</p>
-                                    <p><strong>Brand Identity & Logo Design:</strong> Your brand’s visual identity is crucial to its success. We offer a full range of branding services, including logo design, color scheme development, typography selection, and more. We work closely with you to create a cohesive and memorable brand identity that resonates with your target audience.</p>
-                                    <p><strong>Website Updates & Maintenance:</strong> Keeping your website up-to-date and running smoothly is essential for providing a great user experience and staying competitive. We offer ongoing website maintenance services, including content updates, security monitoring, and performance optimization, so you can focus on what you do best—running your business.</p>
-                                    <p><strong>Content Creation & Copywriting:</strong> High-quality content is key to communicating your brand’s message and connecting with your audience. Our team of skilled copywriters can create compelling and informative content for your website, blog, social media, and more. We focus on crafting content that not only informs but also inspires action.</p>
-                                    <p>We invite you to explore our services in detail, and if you have any questions or need more information, don’t hesitate to reach out. Let SitePro Craft help you create a digital presence that truly reflects your brand’s unique identity and vision.</p>
+                                    <p><strong>Brand Identity & Logo Design:</strong> Your brand’s visual identity is crucial to its success. We offer a full range of branding services, including logo design, color scheme development, typography selection, and more. We work closely with you to create a cohesive and memorable brand identity that resonates with your target audience and sets you apart from the competition.</p>
+                                    <p><strong>SEO & Content Strategy:</strong> A beautiful website is useless if no one can find it. That’s why we offer comprehensive SEO and content strategy services to ensure your site ranks high on search engines and attracts the right audience. From keyword research to on-page optimization and content creation, we cover all aspects of SEO to help your business grow.</p>
+                                    <p>We understand that every business is unique, and that’s why we take a personalized approach to every project. Our goal is to deliver solutions that not only meet but exceed your expectations, helping you achieve your business objectives and build a strong online presence.</p>
                                 </div>
-                                <a href="#" id="toggle-btn" class="button icon fa-chevron-down" style="display: inline-block; margin-top: 20px;">Read More</a>
+                                <a href="#" id="toggle-btn" class="button icon fa-chevron-down">Read More</a>
                             </section>
                         </div>
                     </div>
@@ -251,67 +250,85 @@
             </div>
         </div>
 
-        <!-- FAQ -->
+        <!-- FAQ Section -->
         <div id="faq-wrapper">
             <section id="faq" class="container">
                 <h2>Frequently Asked Questions</h2>
-
                 <div class="faq">
-                    <h3>What services does SitePro Craft offer?</h3>
+                    <h3>What services do you offer?</h3>
                     <div class="answer">
-                        <p>We offer a range of digital solutions including custom website design, blog creation, brand identity development, and website maintenance services.</p>
+                        <p>We offer a range of services including website design, blog creation, brand identity design, and SEO strategies.</p>
                     </div>
                 </div>
                 <div class="faq">
-                    <h3>How can I get started with SitePro Craft?</h3>
+                    <h3>How can I get started?</h3>
                     <div class="answer">
-                        <p>You can get started by contacting us through our website, and we will discuss your specific needs and how we can help you achieve your digital goals.</p>
+                        <p>You can get started by contacting us through our website. We'll discuss your needs and develop a plan that works for you.</p>
                     </div>
                 </div>
                 <div class="faq">
-                    <h3>What makes SitePro Craft different from other digital solution providers?</h3>
+                    <h3>What is the cost of your services?</h3>
                     <div class="answer">
-                        <p>Our personalized approach and commitment to understanding your unique needs set us apart. We tailor our services to ensure your digital presence is effective and aligned with your brand's goals.</p>
+                        <p>The cost varies depending on the specific services and scope of the project. Please contact us for a detailed quote.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Form -->
-                <form id="faq-form">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address">
-
+                <form id="faq-form" onsubmit="event.preventDefault(); submitForm();">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email address" required>
                     <label for="question">Your Question:</label>
-                    <textarea id="question" name="question" rows="5" placeholder="Ask us anything..."></textarea>
-
-                    <button type="button" onclick="submitForm()">Submit</button>
-
-                    <p id="form-message"></p>
+                    <textarea id="question" rows="4" placeholder="Ask your question here" required></textarea>
+                    <button type="submit">Submit</button>
+                    <div id="form-message"></div>
                 </form>
             </section>
         </div>
 
         <!-- Footer -->
         <div id="footer-wrapper">
-            <footer id="footer" class="container">
+            <section id="footer" class="container">
                 <div class="row">
-                    <div class="col-12">
-                        <ul class="contact">
-                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                            <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
-                            <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-                        </ul>
-                        <ul class="copyright">
-                            <li>&copy; 2024 SitePro Craft. All rights reserved.</li>
-                        </ul>
+                    <div class="col-12 col-12-medium">
+                        <section class="widget contact">
+                            <h3>Contact Us</h3>
+                            <ul>
+                                <li>
+                                    <a href="mailto:info@siteprocraft.com" class="icon solid fa-envelope"><span class="label">Email</span></a>
+                                </li>
+                                <li>
+                                    <a href="tel:+1234567890" class="icon solid fa-phone"><span class="label">Phone</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a>
+                                </li>
+                                <li>
+                                    <a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+                                </li>
+                            </ul>
+                        </section>
                     </div>
                 </div>
-            </footer>
+                <div class="row">
+                    <div class="col-12">
+                        <div id="copyright">
+                            <ul class="menu">
+                                <li>&copy; SiteProCraft. All rights reserved.</li>
+                                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
     </div>
 
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
     <script>
         // FAQ toggle function
         document.querySelectorAll('.faq h3').forEach(function (question) {
@@ -347,8 +364,18 @@
             const question = document.getElementById('question').value;
             const formMessage = document.getElementById('form-message');
 
-            // Simple form validation
-            if (email.trim() === '' || question.trim() === '') {
+            // Email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email) || !email.endsWith('.com')) {
+                formMessage.innerHTML = 'Please enter a correct email address.';
+                formMessage.classList.remove('success-message');
+                formMessage.classList.add('error-message');
+                return;
+            }
+
+            // Simple form validation for question
+            if (question.trim() === '') {
                 formMessage.innerHTML = 'Please fill out both fields.';
                 formMessage.classList.remove('success-message');
                 formMessage.classList.add('error-message');
