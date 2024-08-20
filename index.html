@@ -8,11 +8,11 @@
     <style>
         #typed-text-container {
             width: 100%;
-            min-height: 47px;
+			min-height:47px;
             height: auto;
             position: relative;
             overflow: hidden;
-            font-size: 9px;
+            font-size: 9px; /* Font size set to 9px */
         }
 
         #typed-text {
@@ -31,7 +31,7 @@
         #typed-text-container p {
             margin: 0;
             white-space: pre-wrap;
-            color: #0b7883;
+			color: #0b7883;
         }
 
         #typing-dots {
@@ -55,10 +55,6 @@
                 content: '...';
             }
         }
-
-        nav#nav ul li.active a {
-            color: #0b7883; /* Highlight color */
-        }
     </style>
 </head>
 <body class="is-preload homepage">
@@ -76,15 +72,17 @@
 
                 <!-- Nav -->
                 <nav id="nav">
-                    <ul>
-                        <li id="home"><a href="index.html">Home</a></li>
-                        <li id="services"><a href="Services.html">Services</a></li>
-                        <li id="portfolio"><a href="portfolio.html">Portfolio</a></li> <!-- New Portfolio link -->
-                        <li id="about"><a href="About Us.html">About Us</a></li>
-                        <li id="testimonials"><a href="testimonials.html">Testimonials</a></li> <!-- New Testimonials link -->
-                        <li id="faq"><a href="FAQ.html">FAQ</a></li>
-                    </ul>
-                </nav>
+					<ul>
+						<li class="current"><a href="index.html">Home</a></li>
+						<li><a href="Services.html">Services</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li> <!-- New Portfolio link -->
+						<li><a href="About Us.html">About Us</a></li>
+						<li><a href="testimonials.html">Testimonials</a></li> <!-- New Testimonials link -->
+						<li><a href="FAQ.html">FAQ</a></li>
+					</ul>
+				</nav>
+				
+
             </header>
         </div>
 
@@ -197,15 +195,14 @@
                                     <p><strong>Professional Video Editing:</strong> In today’s digital landscape, video content is king. Whether you’re creating promotional videos, tutorials, or social media content, our professional video editing services will make sure your videos are polished, compelling, and effective. We work closely with you to understand your vision and bring it to life, enhancing your brand’s storytelling and audience engagement.</p>
                                     <p><strong>Comprehensive Digital Solutions:</strong> Beyond websites, blogs, and videos, SitePro Craft offers a suite of additional services designed to enhance your online presence. From social media integration and SEO optimization to content creation and branding, we provide all the tools you need to succeed online. Our holistic approach ensures that every aspect of your digital strategy is aligned and working towards your goals.</p>
                                     <p><strong>Why Choose SitePro Craft?</strong></p>
-                                    <p><strong>Tailored Solutions:</strong> We understand that every business and project is unique. That’s why we take the time to understand your specific needs and goals, crafting personalized solutions that deliver results. Whether you need a full-fledged website, a dynamic blog, or professional video content, we’re here to help you achieve your vision.</p>
-                                    <p><strong>Expertise & Experience:</strong> Our team of skilled professionals brings years of experience in web development, content creation, and digital marketing. We stay up-to-date with the latest industry trends and technologies, ensuring your project is not only current but also ahead of the curve.</p>
-                                    <p><strong>Collaborative Approach:</strong> At SitePro Craft, we believe in collaboration and communication. We work closely with you throughout the entire process, from initial concept to final delivery, ensuring your feedback is incorporated and your expectations are met.</p>
-                                    <p><strong>Comprehensive Support:</strong> Our commitment to your success doesn’t end with the launch of your project. We offer ongoing support and maintenance services to ensure your website, blog, or video content continues to perform at its best. Whether you need updates, troubleshooting, or new features, we’re here to help.</p>
-                                    <p>Ready to take your digital presence to the next level? Contact SitePro Craft today to discuss your project and learn how we can help you achieve your goals.</p>
+                                    <p><strong>Tailored Solutions:</strong> We understand that every business and project is unique. That’s why we take the time to understand your specific needs and goals, crafting personalized solutions that deliver results. Whether you need a full-fledged website, a dynamic blog, or eye-catching video content, we tailor our services to help you achieve your objectives.</p>
+                                    <p><strong>Expertise Across Platforms:</strong> With a diverse skill set and experience across various digital platforms, our team is equipped to handle projects of any size and complexity. From start to finish, we bring our expertise to ensure that every aspect of your digital presence is optimized for success.</p>
+                                    <p><strong>Commitment to Quality:</strong> At SitePro Craft, quality is our top priority. We are committed to delivering high standards in every project we undertake, ensuring that you receive a final product that exceeds your expectations. Our attention to detail and dedication to excellence set us apart in the industry.</p>
                                 </div>
-                                <a id="read-more" href="javascript:void(0);" onclick="toggleReadMore();" class="button">Continue Reading</a>
+                                <button id="toggle-button">Continue Reading</button>
                             </section>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -217,42 +214,32 @@
                 <div class="row">
                     <div class="col-6 col-12-medium">
 
-                        <!-- Links -->
+                        <!-- Footer Content -->
                         <section>
-                            <h2>Interesting stuff</h2>
-                            <ul class="divided">
-                                <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                                <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                                <li><a href="#">Adipiscing feugiat phasellus consequat</a></li>
-                                <li><a href="#">Enim commodo lorem ipsum consequat magna</a></li>
+                            <h3>Get in touch</h3>
+                            <p>Feel free to contact us if you have any questions or if you would like to get started on your next project.</p>
+                            <ul class="icons">
+                                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                             </ul>
                         </section>
 
                     </div>
                     <div class="col-6 col-12-medium">
 
-                        <!-- Links -->
+                        <!-- Footer Links -->
                         <section>
-                            <h2>More interesting stuff</h2>
-                            <ul class="divided">
-                                <li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-                                <li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-                                <li><a href="#">Adipiscing feugiat phasellus consequat</a></li>
-                                <li><a href="#">Enim commodo lorem ipsum consequat magna</a></li>
+                            <h3>Quick Links</h3>
+                            <ul class="links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="Services.html">Services</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="About Us.html">About Us</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="FAQ.html">FAQ</a></li>
                             </ul>
                         </section>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-
-                        <!-- Copyright -->
-                        <div id="copyright">
-                            <ul class="menu">
-                                <li>&copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                            </ul>
-                        </div>
 
                     </div>
                 </div>
@@ -269,12 +256,10 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        // Typing Effect
         document.addEventListener("DOMContentLoaded", function() {
             const textArray = [
-                "At SitePro Craft, we specialize in providing comprehensive digital solutions that help you establish and elevate your online presence.",
-                "Whether you’re a small business owner, a content creator, or an entrepreneur, we offer a range of services designed to make your brand stand out in the digital world.",
-                "Your trusted partner in web development, software development, and API integrations.",
+                "Welcome to SiteProCraft!",
+                "Your trusted partner in web development, software development, and API intergations.",
                 "We bring your ideas to life.",
                 "Creating stunning and functional websites.",
                 "Let's build something great together.",
@@ -310,38 +295,23 @@
             }
 
             type(); // start the typing effect
+
+            // Toggle full text visibility
+            document.getElementById("toggle-button").addEventListener("click", function() {
+                const fullText = document.getElementById("full-text");
+                const introText = document.getElementById("intro-text");
+
+                if (fullText.style.display === "none") {
+                    fullText.style.display = "block";
+                    introText.style.display = "none";
+                    this.textContent = "Show Less";
+                } else {
+                    fullText.style.display = "none";
+                    introText.style.display = "block";
+                    this.textContent = "Continue Reading";
+                }
+            });
         });
-
-        // Highlighting the active menu item based on the current page
-        document.addEventListener("DOMContentLoaded", function() {
-            const path = window.location.pathname.split("/").pop();
-
-            const navItems = {
-                'index.html': 'home',
-                'Services.html': 'services',
-                'portfolio.html': 'portfolio',
-                'About Us.html': 'about',
-                'testimonials.html': 'testimonials',
-                'FAQ.html': 'faq'
-            };
-
-            const activeNavItem = navItems[path] || 'home';
-            document.getElementById(activeNavItem).classList.add('active');
-        });
-
-        // Function to toggle full text
-        function toggleReadMore() {
-            const fullText = document.getElementById("full-text");
-            const readMoreButton = document.getElementById("read-more");
-
-            if (fullText.style.display === "none") {
-                fullText.style.display = "block";
-                readMoreButton.textContent = "Read Less";
-            } else {
-                fullText.style.display = "none";
-                readMoreButton.textContent = "Continue Reading";
-            }
-        }
     </script>
 
 </body>
