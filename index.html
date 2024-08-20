@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* Typing effect */
         #typed-text-container {
             width: 100%;
             min-height: 47px;
@@ -36,29 +35,31 @@
             }
         }
 
-        /* Navigation */
+        #typed-text-container p {
+            margin: 0;
+            white-space: pre-wrap;
+            color: #0b7883;
+        }
+
+        /* Highlight current navigation item */
         #nav ul {
             list-style: none;
             padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
         }
 
-        #nav ul li {
-            margin-right: 20px;
+        #nav li {
+            display: inline;
+            margin-right: 10px;
         }
 
-        #nav ul li a {
-            text-decoration: none;
-            color: #333;
-            padding: 10px;
-            border-radius: 5px;
+        #nav li.current a {
+            font-weight: bold;
+            color: #0b7883;
         }
 
-        #nav ul li a.active {
-            background-color: #0b7883;
-            color: white;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -79,7 +80,7 @@
                 <!-- Nav -->
                 <nav id="nav">
                     <ul>
-                        <li><a href="#home" class="active">Home</a></li>
+                        <li class="current"><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">About Us</a></li>
@@ -90,7 +91,7 @@
         </div>
 
         <!-- Banner -->
-        <div id="banner-wrapper" id="home">
+        <div id="banner-wrapper">
             <div id="banner" class="box container">
                 <div class="row">
                     <div class="col-7 col-12-medium">
@@ -109,7 +110,7 @@
         </div>
 
         <!-- Features -->
-        <div id="features-wrapper" id="portfolio">
+        <div id="features-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-4 col-12-medium">
@@ -153,7 +154,7 @@
         </div>
 
         <!-- Main -->
-        <div id="main-wrapper" id="services">
+        <div id="main-wrapper">
             <div class="container">
                 <div class="row gtr-200">
                     <div class="col-4 col-12-medium">
@@ -174,7 +175,7 @@
                     </div>
                     <div class="col-8 col-12-medium imp-medium">
                         <div id="content">
-                            <section class="last">
+                            <section class="last" id="services">
                                 <h2>So what's this all about?</h2>
                                 <p id="intro-text">At SitePro Craft, we specialize in providing comprehensive digital solutions that help you establish and elevate your online presence. Whether you’re a small business owner, a content creator, or an entrepreneur, we offer a range of services designed to make your brand stand out in the digital world.</p>
                                 <div id="full-text" style="display: none;">
@@ -184,146 +185,106 @@
                                     <p><strong>Professional Video Editing:</strong> In today’s digital landscape, video content is king. Whether you’re creating promotional videos, tutorials, or social media content, our professional video editing services will make sure your videos are polished, compelling, and effective. We work closely with you to understand your vision and bring it to life, enhancing your brand’s storytelling and audience engagement.</p>
                                     <p><strong>Comprehensive Digital Solutions:</strong> Beyond websites, blogs, and videos, SitePro Craft offers a suite of additional services designed to enhance your online presence. From social media integration and SEO optimization to content creation and branding, we provide all the tools you need to succeed online. Our holistic approach ensures that every aspect of your digital strategy is aligned and working towards your goals.</p>
                                     <p><strong>Why Choose SitePro Craft?</strong></p>
-                                    <p><strong>Tailored Solutions:</strong> We
-                                        <p><strong>Tailored Solutions:</strong> We understand that every business and project is unique. That’s why we take the time to understand your specific needs and goals, crafting personalized solutions that deliver results. Whether you need a full-fledged website, a dynamic blog, or eye-catching video content, we tailor our services to help you achieve your objectives.</p>
-                                        <p><strong>Expertise Across Platforms:</strong> With a diverse skill set and experience across various digital platforms, our team is equipped to handle projects of any size and complexity. From start to finish, we bring our expertise to ensure that every aspect of your digital presence is optimized for success.</p>
-                                        <p><strong>Commitment to Quality:</strong> At SitePro Craft, quality is our top priority. We are committed to delivering high standards in every project we undertake, ensuring that you receive a final product that exceeds your expectations. Our attention to detail and dedication to excellence set us apart in the industry.</p>
-                                    </div>
-                                    <button id="toggle-button">Continue Reading</button>
-                                </section>
-                            </div>
+                                    <p><strong>Tailored Solutions:</strong> We understand that every business and project is unique. That’s why we take the time to understand your specific needs and goals, crafting personalized solutions that deliver results. Whether you need a full-fledged website, a dynamic blog, or eye-catching video content, we tailor our services to help you achieve your objectives.</p>
+                                    <p><strong>Expertise Across Platforms:</strong> With a diverse skill set and experience across various digital platforms, our team is equipped to handle projects of any size and complexity. From start to finish, we bring our expertise to ensure that every aspect of your digital presence is optimized for success.</p>
+                                    <p><strong>Commitment to Quality:</strong> At SitePro Craft, quality is our top priority. We are committed to delivering high standards in every project we undertake, ensuring that you receive a final product that exceeds your expectations. Our attention to detail and dedication to excellence set us apart in the industry.</p>
+                                </div>
+                                <button id="toggle-button">Read more</button>
+                            </section>
                         </div>
                     </div>
                 </div>
             </div>
-    
-            <!-- Footer -->
-            <div id="footer-wrapper">
-                <footer id="footer" class="container">
-                    <div class="row">
-                        <div class="col-6 col-12-medium">
-                            <!-- Footer Content -->
-                            <section>
-                                <h3>Get in touch</h3>
-                                <p>Feel free to contact us if you have any questions or if you would like to get started on your next project.</p>
-                                <ul class="icons">
-                                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                    <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                                </ul>
-                            </section>
-                        </div>
-                        <div class="col-6 col-12-medium">
-                            <!-- Footer Links -->
-                            <section>
-                                <h3>Quick Links</h3>
-                                <ul class="links">
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="#services">Services</a></li>
-                                    <li><a href="#portfolio">Portfolio</a></li>
-                                    <li><a href="#about">About Us</a></li>
-                                    <li><a href="#faq">FAQ</a></li>
-                                </ul>
-                            </section>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-    
         </div>
-    
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                // Typing effect with erase
-                const textArray = [
-                    "Welcome to SiteProCraft!",
-                    "Your trusted partner in web development, software development, and API integrations.",
-                    "We provide innovative solutions tailored to your business needs.",
-                    "Let's build something great together!"
-                ];
-                const typingSpeed = 100; // Speed of typing in milliseconds
-                const erasingSpeed = 50; // Speed of erasing in milliseconds
-                const delayBetweenTexts = 1000; // Delay between texts in milliseconds
-                let textIndex = 0;
-                let charIndex = 0;
-                let isErasing = false;
-                const typedTextElement = document.getElementById("typed-text");
-    
-                function type() {
-                    if (textIndex < textArray.length) {
-                        if (!isErasing) {
-                            if (charIndex < textArray[textIndex].length) {
-                                typedTextElement.textContent += textArray[textIndex][charIndex];
-                                charIndex++;
-                                setTimeout(type, typingSpeed);
-                            } else {
-                                isErasing = true;
-                                setTimeout(type, delayBetweenTexts);
-                            }
-                        } else {
-                            if (charIndex > 0) {
-                                typedTextElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-                                charIndex--;
-                                setTimeout(type, erasingSpeed);
-                            } else {
-                                isErasing = false;
-                                textIndex++;
-                                setTimeout(type, delayBetweenTexts);
-                            }
-                        }
-                    }
+
+        <!-- Footer -->
+        <div id="footer-wrapper">
+            <footer id="footer" class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="menu">
+                            <li>&copy; SitePro Craft. All rights reserved.</li>
+                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const typedTextElement = document.getElementById("typed-text");
+        const lines = [
+            "We Build Responsive Websites",
+            "We Create Engaging Blogs",
+            "We Deliver Stunning Videos",
+            "We Offer Comprehensive Digital Solutions"
+        ];
+        let currentLineIndex = 0;
+        let typingSpeed = 100;  // Time in ms per character
+        let erasingSpeed = 30;  // Faster erasing speed
+        let delayBetweenLines = 1000; // Time in ms between lines
+
+        function typeLine(line, callback) {
+            let charIndex = 0;
+            function typeNextChar() {
+                if (charIndex < line.length) {
+                    typedTextElement.textContent += line.charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeNextChar, typingSpeed);
+                } else {
+                    setTimeout(() => callback(), delayBetweenLines);
                 }
-                type();
-    
-                // Navigation scroll and highlight
-                const navLinks = document.querySelectorAll("#nav a");
-                const sections = document.querySelectorAll("div[id]");
-    
-                function setActiveLink() {
-                    let index = sections.length;
-                    while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
-                    navLinks.forEach((link) => link.classList.remove("active"));
-                    navLinks[index].classList.add("active");
+            }
+            typeNextChar();
+        }
+
+        function eraseLine(callback) {
+            let charIndex = typedTextElement.textContent.length;
+            function eraseNextChar() {
+                if (charIndex > 0) {
+                    typedTextElement.textContent = typedTextElement.textContent.substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(eraseNextChar, erasingSpeed);
+                } else {
+                    callback();
                 }
-                setActiveLink();
-                window.addEventListener("scroll", setActiveLink);
-    
-                navLinks.forEach((link) => {
-                    link.addEventListener("click", function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute("href").substring(1);
-                        const targetSection = document.getElementById(targetId);
-    
-                        window.scrollTo({
-                            top: targetSection.offsetTop,
-                            behavior: "smooth"
-                        });
+            }
+            eraseNextChar();
+        }
+
+        function startTypingEffect() {
+            if (currentLineIndex < lines.length) {
+                typeLine(lines[currentLineIndex], () => {
+                    eraseLine(() => {
+                        currentLineIndex++;
+                        startTypingEffect();
                     });
                 });
-    
-                // Toggle button for full text
-                const toggleButton = document.getElementById("toggle-button");
-                const fullText = document.getElementById("full-text");
-    
-                toggleButton.addEventListener("click", function () {
-                    if (fullText.style.display === "none") {
-                        fullText.style.display = "block";
-                        toggleButton.textContent = "Read Less";
-                    } else {
-                        fullText.style.display = "none";
-                        toggleButton.textContent = "Continue Reading";
-                    }
+            } else {
+                currentLineIndex = 0; // Reset index if you want to loop
+                startTypingEffect();  // Uncomment to keep the effect looping
+            }
+        }
+
+        startTypingEffect();
+
+        document.querySelectorAll('#nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                document.querySelectorAll('#nav li').forEach(li => li.classList.remove('current'));
+                this.parentElement.classList.add('current');
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
                 });
             });
-        </script>
-    </body>
-    
-    </html>
-    
+        });
+    </script>
+</body>
+
+</html>
