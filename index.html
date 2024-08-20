@@ -40,27 +40,82 @@
             white-space: pre-wrap;
             color: #0b7883;
         }
-        
+
         #faq-wrapper {
             margin-top: 50px;
             padding: 20px;
             background-color: #f4f4f4;
         }
-        
+
         #faq h2 {
             color: #0b7883;
             text-align: center;
         }
-        
+
         .faq h3 {
             color: #333;
             cursor: pointer;
             margin-bottom: 10px;
         }
-        
+
         .answer {
             display: none;
             margin-bottom: 20px;
+        }
+
+        /* Styling for the FAQ form */
+        #faq-form {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #faq-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #faq-form input,
+        #faq-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        #faq-form button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0b7883;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #faq-form button:hover {
+            background-color: #065f66;
+        }
+
+        #form-message {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .success-message {
+            color: green;
+        }
+
+        .error-message {
+            color: red;
         }
     </style>
 </head>
@@ -183,14 +238,12 @@
                                     <p>Our Services:</p>
                                     <p><strong>Custom Website Design & Development:</strong> Your website is often the first impression customers have of your business, so it needs to be professional, functional, and visually appealing. At SitePro Craft, we create custom websites that are not only aesthetically pleasing but also fully responsive, ensuring they look great on any device. From e-commerce sites to portfolios and corporate websites, we tailor each project to meet your specific needs and goals.</p>
                                     <p><strong>Blog Creation & Management:</strong> Blogging is a powerful tool for engaging your audience, sharing expertise, and boosting your SEO. Our team can help you create a dynamic and engaging blog that aligns with your brand’s voice and objectives. We handle everything from design and layout to content strategy, ensuring your blog not only attracts readers but also keeps them coming back for more.</p>
-                                    <p><strong>Professional Video Editing:</strong> In today’s digital landscape, video content is king. Whether you’re creating promotional videos, tutorials, or social media content, our professional video editing services will make sure your videos are polished, compelling, and effective. We work closely with you to understand your vision and bring it to life, enhancing your brand’s storytelling and audience engagement.</p>
-                                    <p><strong>Comprehensive Digital Solutions:</strong> Beyond websites, blogs, and videos, SitePro Craft offers a suite of additional services designed to enhance your online presence. From social media integration and SEO optimization to content creation and branding, we provide all the tools you need to succeed online. Our holistic approach ensures that every aspect of your digital strategy is aligned and working towards your goals.</p>
-                                    <p><strong>Why Choose SitePro Craft?</strong></p>
-                                    <p><strong>Tailored Solutions:</strong> We understand that every business and project is unique. That’s why we take the time to understand your specific needs and goals, crafting personalized solutions that deliver results. Whether you need a full-fledged website, a dynamic blog, or eye-catching video content, we tailor our services to help you achieve your objectives.</p>
-                                    <p><strong>Expertise Across Platforms:</strong> With a diverse skill set and experience across various digital platforms, our team is equipped to handle projects of any size and complexity. From start to finish, we bring our expertise to ensure that every aspect of your digital presence is optimized for success.</p>
-                                    <p><strong>Commitment to Quality:</strong> At SitePro Craft, quality is our top priority. We are committed to delivering high standards in every project we undertake, ensuring that you receive a final product that exceeds your expectations. Our attention to detail and dedication to excellence set us apart in the industry.</p>
+                                    <p><strong>Brand Identity & Logo Design:</strong> Your brand’s visual identity is crucial to its success. We offer a full range of branding services, including logo design, color scheme development, typography selection, and more. We work closely with you to create a cohesive and memorable brand identity that resonates with your target audience.</p>
+                                    <p><strong>Website Updates & Maintenance:</strong> Keeping your website up-to-date and running smoothly is essential for providing a great user experience and staying competitive. We offer ongoing website maintenance services, including content updates, security monitoring, and performance optimization, so you can focus on what you do best—running your business.</p>
+                                    <p><strong>Content Creation & Copywriting:</strong> High-quality content is key to communicating your brand’s message and connecting with your audience. Our team of skilled copywriters can create compelling and informative content for your website, blog, social media, and more. We focus on crafting content that not only informs but also inspires action.</p>
+                                    <p>We invite you to explore our services in detail, and if you have any questions or need more information, don’t hesitate to reach out. Let SitePro Craft help you create a digital presence that truly reflects your brand’s unique identity and vision.</p>
                                 </div>
-                                <button id="toggle-button">Read more</button>
+                                <a href="#" id="toggle-btn" class="button icon fa-chevron-down" style="display: inline-block; margin-top: 20px;">Read More</a>
                             </section>
                         </div>
                     </div>
@@ -198,41 +251,43 @@
             </div>
         </div>
 
-        <!-- FAQ Section -->
+        <!-- FAQ -->
         <div id="faq-wrapper">
-            <div id="faq" class="container">
+            <section id="faq" class="container">
                 <h2>Frequently Asked Questions</h2>
+
                 <div class="faq">
-                    <h3>What services do you offer?</h3>
+                    <h3>What services does SitePro Craft offer?</h3>
                     <div class="answer">
-                        <p>We offer a range of services including custom website design and development, blog creation and management, professional video editing, and comprehensive digital solutions tailored to your needs.</p>
+                        <p>We offer a range of digital solutions including custom website design, blog creation, brand identity development, and website maintenance services.</p>
                     </div>
                 </div>
                 <div class="faq">
-                    <h3>How long does it take to build a website?</h3>
+                    <h3>How can I get started with SitePro Craft?</h3>
                     <div class="answer">
-                        <p>The timeline for building a website depends on the complexity and requirements of the project. Typically, a standard website takes 4-6 weeks from the initial consultation to the final launch.</p>
+                        <p>You can get started by contacting us through our website, and we will discuss your specific needs and how we can help you achieve your digital goals.</p>
                     </div>
                 </div>
                 <div class="faq">
-                    <h3>Do you offer ongoing support after the website is live?</h3>
+                    <h3>What makes SitePro Craft different from other digital solution providers?</h3>
                     <div class="answer">
-                        <p>Yes, we provide ongoing support and maintenance services to ensure your website remains updated, secure, and optimized for performance.</p>
+                        <p>Our personalized approach and commitment to understanding your unique needs set us apart. We tailor our services to ensure your digital presence is effective and aligned with your brand's goals.</p>
                     </div>
                 </div>
-                <div class="faq">
-                    <h3>What is the cost of your services?</h3>
-                    <div class="answer">
-                        <p>The cost of our services varies depending on the scope and complexity of the project. We provide customized quotes based on your specific needs and goals.</p>
-                    </div>
-                </div>
-                <div class="faq">
-                    <h3>How do I get started?</h3>
-                    <div class="answer">
-                        <p>To get started, simply contact us with your project details. We’ll schedule an initial consultation to discuss your needs and how we can help you achieve your goals.</p>
-                    </div>
-                </div>
-            </div>
+
+                <!-- FAQ Form -->
+                <form id="faq-form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email address">
+
+                    <label for="question">Your Question:</label>
+                    <textarea id="question" name="question" rows="5" placeholder="Ask us anything..."></textarea>
+
+                    <button type="button" onclick="submitForm()">Submit</button>
+
+                    <p id="form-message"></p>
+                </form>
+            </section>
         </div>
 
         <!-- Footer -->
@@ -240,110 +295,73 @@
             <footer id="footer" class="container">
                 <div class="row">
                     <div class="col-12">
-                        <ul class="menu">
-                            <li>&copy; SiteProCraft. All rights reserved.</li>
-                            <li>Design: <a href="http://siteprocraft.com">siteprocraft</a></li>
+                        <ul class="contact">
+                            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                            <li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+                            <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                        </ul>
+                        <ul class="copyright">
+                            <li>&copy; 2024 SitePro Craft. All rights reserved.</li>
                         </ul>
                     </div>
                 </div>
             </footer>
         </div>
+
     </div>
 
     <script>
-        const typedTextElement = document.getElementById("typed-text");
-        const lines = [
-            "We Build Responsive Websites",
-            "We Create Engaging Blogs",
-            "We Deliver Stunning Videos",
-            "We Offer Comprehensive Digital Solutions"
-        ];
-        let currentLineIndex = 0;
-        let typingSpeed = 100;  // Time in ms per character
-        let erasingSpeed = 30;  // Faster erasing speed
-        let delayBetweenLines = 1000; // Time in ms between lines
-
-        function typeLine(line, callback) {
-            let charIndex = 0;
-            function typeNextChar() {
-                if (charIndex < line.length) {
-                    typedTextElement.textContent += line.charAt(charIndex);
-                    charIndex++;
-                    setTimeout(typeNextChar, typingSpeed);
-                } else {
-                    setTimeout(() => callback(), delayBetweenLines);
-                }
-            }
-            typeNextChar();
-        }
-
-        function eraseLine(callback) {
-            let charIndex = typedTextElement.textContent.length;
-            function eraseNextChar() {
-                if (charIndex > 0) {
-                    typedTextElement.textContent = typedTextElement.textContent.substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(eraseNextChar, erasingSpeed);
-                } else {
-                    callback();
-                }
-            }
-            eraseNextChar();
-        }
-
-        function startTypingEffect() {
-            if (currentLineIndex < lines.length) {
-                typeLine(lines[currentLineIndex], () => {
-                    eraseLine(() => {
-                        currentLineIndex++;
-                        startTypingEffect();
-                    });
-                });
-            } else {
-                currentLineIndex = 0; // Reset index if you want to loop
-                startTypingEffect();  // Uncomment to keep the effect looping
-            }
-        }
-
-        startTypingEffect();
-
-        document.querySelectorAll('#nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                document.querySelectorAll('#nav li').forEach(li => li.classList.remove('current'));
-                this.parentElement.classList.add('current');
-
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Toggle FAQ answers
-        document.querySelectorAll('.faq h3').forEach(faq => {
-            faq.addEventListener('click', function () {
+        // FAQ toggle function
+        document.querySelectorAll('.faq h3').forEach(function (question) {
+            question.addEventListener('click', function () {
                 const answer = this.nextElementSibling;
                 answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
             });
         });
 
-        // Toggle 'Read more' button functionality
-        const fullText = document.getElementById("full-text");
-        const toggleButton = document.getElementById("toggle-button");
-
-        toggleButton.addEventListener("click", function () {
-            if (fullText.style.display === "none") {
-                fullText.style.display = "block";
-                toggleButton.textContent = "Read less";
+        // Toggle "Read More" and "Read Less" in the "So what's this all about?" section
+        document.getElementById('toggle-btn').addEventListener('click', function (event) {
+            event.preventDefault();
+            const fullText = document.getElementById('full-text');
+            const introText = document.getElementById('intro-text');
+            if (fullText.style.display === 'none') {
+                fullText.style.display = 'block';
+                introText.style.display = 'none';
+                this.innerHTML = 'Read Less';
+                this.classList.remove('fa-chevron-down');
+                this.classList.add('fa-chevron-up');
             } else {
-                fullText.style.display = "none";
-                toggleButton.textContent = "Read more";
+                fullText.style.display = 'none';
+                introText.style.display = 'block';
+                this.innerHTML = 'Read More';
+                this.classList.remove('fa-chevron-up');
+                this.classList.add('fa-chevron-down');
             }
         });
+
+        // FAQ form submission function
+        function submitForm() {
+            const email = document.getElementById('email').value;
+            const question = document.getElementById('question').value;
+            const formMessage = document.getElementById('form-message');
+
+            // Simple form validation
+            if (email.trim() === '' || question.trim() === '') {
+                formMessage.innerHTML = 'Please fill out both fields.';
+                formMessage.classList.remove('success-message');
+                formMessage.classList.add('error-message');
+            } else {
+                formMessage.innerHTML = 'Thank you for your question! We will get back to you soon.';
+                formMessage.classList.remove('error-message');
+                formMessage.classList.add('success-message');
+
+                // Clear the form fields
+                document.getElementById('email').value = '';
+                document.getElementById('question').value = '';
+            }
+        }
     </script>
 </body>
 
