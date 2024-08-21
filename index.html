@@ -138,10 +138,6 @@
             text-decoration: none;
         }
 
-        #nav > ul > li:hover > ul {
-            display: block;
-        }
-
         #nav ul ul {
             display: none;
             position: absolute;
@@ -152,6 +148,7 @@
             top: 100%;
             left: 0;
             white-space: nowrap;
+            z-index: 1000;
         }
 
         #nav ul ul li {
@@ -169,12 +166,6 @@
 
         #nav ul ul li a:hover {
             background-color: #e0e0e0;
-        }
-
-        #nav ul ul li ul {
-            position: relative;
-            top: 0;
-            left: 100%;
         }
     </style>
 </head>
@@ -197,13 +188,12 @@
                     <ul>
                         <li class="current"><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#footer">About Us</a></li> 
-                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#footer">About Us</a></li>
                         <li>
-                            <a href="#">Policies</a>
-                            <ul>
-                                <li><a href="Cancellation-and-Refund.html">Cancellation and Refund</a></li>
-                                <li><a href="Shipping-and-Delivery.html">Shipping & Delivery</a></li>
+                            <a href="#" id="policies">Policies</a>
+                            <ul id="policies-dropdown">
+                                <li><a href="#">Cancellation and Refund</a></li>
+                                <li><a href="#">Shipping & Delivery</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -290,16 +280,60 @@
                                         <div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a></div>
                                     </div>
                                 </div>
+                                <a href="#" class="button icon fa-file-alt">More</a>
                             </section>
                         </div>
                     </div>
-                    <div class="col-8 col-12-medium">
+                    <div class="col-8 col-12-medium imp-medium">
                         <div id="content">
                             <section>
-                                <h2>About the Site</h2>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla. Integer euismod odio nec turpis tincidunt, ac semper ligula fermentum. Nulla facilisi. Cras venenatis, purus quis convallis tristique, tortor mi feugiat nisi, in sodales ipsum elit vitae risus.</p>
+                                <header>
+                                    <h2>Welcome to SiteProCraft</h2>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <footer>
+                                    <a href="#" class="button">Learn More</a>
+                                </footer>
                             </section>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div id="faq-wrapper">
+            <div class="container">
+                <div id="faq">
+                    <h2>FAQ</h2>
+                    <div class="faq">
+                        <h3>Question 1?</h3>
+                        <div class="answer">
+                            <p>Answer to question 1.</p>
+                        </div>
+                    </div>
+                    <div class="faq">
+                        <h3>Question 2?</h3>
+                        <div class="answer">
+                            <p>Answer to question 2.</p>
+                        </div>
+                    </div>
+                    <div id="faq-form">
+                        <h3>Ask us a question</h3>
+                        <form id="ask-form">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required />
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required />
+
+                            <label for="question">Question</label>
+                            <textarea id="question" name="question" rows="4" required></textarea>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                        <div id="form-message"></div>
                     </div>
                 </div>
             </div>
@@ -307,84 +341,86 @@
 
         <!-- Footer -->
         <div id="footer-wrapper">
-            <div id="footer" class="container">
-                <section>
-                    <h2>Have a question?</h2>
-                    <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                    <a href="#" class="button">Contact Us</a>
-                </section>
-            </div>
-        </div>
-
-        <!-- FAQ -->
-        <div id="faq-wrapper">
-            <div id="faq" class="container">
-                <h2>Frequently Asked Questions</h2>
-                <div class="faq">
-                    <h3>What is your return policy?</h3>
-                    <div class="answer">
-                        <p>Our return policy allows you to return products within 30 days of purchase. Please ensure the product is in its original condition.</p>
+            <footer id="footer" class="container">
+                <div class="row">
+                    <div class="col-6 col-12-medium">
+                        <section>
+                            <h2>About Us</h2>
+                            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+                        </section>
                     </div>
-                    <h3>How can I track my order?</h3>
-                    <div class="answer">
-                        <p>You can track your order using the tracking number sent to your email. Visit our tracking page and enter the tracking number to see the status of your order.</p>
+                    <div class="col-6 col-12-medium">
+                        <section>
+                            <h2>Contact Us</h2>
+                            <ul class="contact">
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Phone</a></li>
+                            </ul>
+                        </section>
                     </div>
-                    <!-- Add more FAQ items here -->
                 </div>
-                <div id="faq-form">
-                    <h3>Submit Your Question</h3>
-                    <form id="form" action="#" method="post">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required />
-
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required />
-
-                        <label for="question">Your Question</label>
-                        <textarea id="question" name="question" rows="4" required></textarea>
-
-                        <button type="submit">Submit</button>
-
-                        <div id="form-message"></div>
-                    </form>
-                </div>
-            </div>
+            </footer>
         </div>
-
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.dropotron.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/main.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $(".faq h3").click(function () {
-                    $(this).next(".answer").slideToggle();
-                });
-
-                $("#form").on("submit", function (e) {
-                    e.preventDefault();
-                    // Assume form is valid and successfully submitted
-                    $("#form-message").html('<p class="success-message">Thank you for your question! We will get back to you soon.</p>');
-                });
-
-                var options = {
-                    strings: ["We offer a variety of services.", "Our services are top-notch.", "Get in touch with us for more info."],
-                    typeSpeed: 50,
-                    backSpeed: 25,
-                    backDelay: 1000,
-                    startDelay: 500,
-                    loop: true,
-                    showCursor: true
-                };
-
-                var typed = new Typed("#typed-text", options);
-            });
-        </script>
 
     </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#nav > ul > li > a").click(function (e) {
+                if ($(this).next("ul").length > 0) {
+                    e.preventDefault();
+                    $(this).next("ul").slideToggle();
+                }
+            });
+
+            $(document).click(function (e) {
+                if (!$(e.target).closest('#nav').length) {
+                    $('#nav ul').slideUp();
+                }
+            });
+
+            $('.faq h3').click(function () {
+                $(this).next('.answer').slideToggle();
+            });
+
+            $('#ask-form').submit(function (e) {
+                e.preventDefault();
+                $('#form-message').removeClass('error-message success-message');
+                $('#form-message').text('');
+
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var question = $('#question').val();
+
+                if (name && email && question) {
+                    $('#form-message').addClass('success-message').text('Thank you for your question, ' + name + '. We will get back to you shortly.');
+                    $(this).trigger('reset');
+                } else {
+                    $('#form-message').addClass('error-message').text('Please fill out all fields.');
+                }
+            });
+
+            // Typewriter effect
+            var typedText = "Welcome to SiteProCraft, where your projects come to life.";
+            var index = 0;
+
+            function type() {
+                if (index < typedText.length) {
+                    $('#typed-text').append(typedText.charAt(index));
+                    index++;
+                    setTimeout(type, 50);
+                }
+            }
+
+            type();
+        });
+    </script>
 </body>
 
 </html>
