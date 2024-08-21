@@ -7,115 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        #typed-text-container {
-            width: 100%;
-            min-height: 47px;
-            height: auto;
+        /* Existing styles... */
+
+        /* Dropdown Menu Styling */
+        .dropdown {
             position: relative;
-            overflow: hidden;
-            font-size: 9px;
-        }
-
-        #typed-text {
-            border-right: 2px solid;
             display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            animation: blink-caret 0.75s step-end infinite;
         }
 
-        @keyframes blink-caret {
-            from,
-            to {
-                border-color: transparent;
-            }
-
-            50% {
-                border-color: black;
-            }
-        }
-
-        #typed-text-container p {
-            margin: 0;
-            white-space: pre-wrap;
-            color: #0b7883;
-        }
-
-        #faq-wrapper {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        #faq h2 {
-            color: #0b7883;
-            text-align: center;
-        }
-
-        .faq h3 {
-            color: #333;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        .answer {
+        .dropdown-content {
             display: none;
-            margin-bottom: 20px;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
 
-        /* Styling for the FAQ form */
-        #faq-form {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #faq-form label {
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
             display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #333;
         }
 
-        #faq-form input,
-        #faq-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px;
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
         }
 
-        #faq-form button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0b7883;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
 
-        #faq-form button:hover {
-            background-color: #065f66;
-        }
-
-        #form-message {
-            margin-top: 10px;
-            font-weight: bold;
-        }
-
-        .success-message {
-            color: green;
-        }
-
-        .error-message {
-            color: red;
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
         }
     </style>
 </head>
@@ -140,247 +65,23 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#footer">About Us</a></li> 
                         <li><a href="#faq">FAQ</a></li>
+                        <!-- Dropdown Menu -->
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">User Agreements</a>
+                            <div class="dropdown-content">
+                                <a href="cancellation.html">Cancellation</a>
+                                <a href="refund-shipping.html">Refund & Shipping</a>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </header>
         </div>
 
-        <!-- Banner -->
-        <div id="banner-wrapper">
-            <div id="banner" class="box container">
-                <div class="row">
-                    <div class="col-7 col-12-medium">
-                        <h2>Hi. This is SiteProCraft.</h2>
-                        <div id="typed-text-container">
-                            <p id="typed-text">&nbsp;</p>
-                        </div>
-                    </div>
-                    <div class="col-5 col-12-medium">
-                        <ul>
-                            <li><a href="#services" class="button large">Explore Services</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Other content here -->
 
-        <!-- Features -->
-        <div id="features-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-12-medium">
-                        <section class="box feature">
-                            <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-                            <div class="inner">
-                                <header>
-                                    <h2>Put something here</h2>
-                                    <p>Maybe here as well I think</p>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section class="box feature">
-                            <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-                            <div class="inner">
-                                <header>
-                                    <h2>An interesting title</h2>
-                                    <p>This is also an interesting subtitle</p>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section class="box feature">
-                            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                            <div class="inner">
-                                <header>
-                                    <h2>Oh, and finally ...</h2>
-                                    <p>Here's another intriguing subtitle</p>
-                                </header>
-                                <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
 
-        <!-- Main -->
-        <div id="main-wrapper">
-            <div class="container">
-                <div class="row gtr-200">
-                    <div class="col-4 col-12-medium">
-                        <div id="sidebar">
-                            <section class="widget thumbnails">
-                                <h3>Interesting stuff</h3>
-                                <div class="grid">
-                                    <div class="row gtr-50">
-                                        <div class="col-6"><a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a></div>
-                                        <div class="col-6"><a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a></div>
-                                        <div class="col-6"><a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a></div>
-                                        <div class="col-6"><a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a></div>
-                                    </div>
-                                </div>
-                                <a href="#" class="button icon fa-file-alt">More</a>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="col-8 col-12-medium imp-medium">
-                        <div id="content">
-                            <section class="last" id="services">
-                                <h2>So what's this all about?</h2>
-                                <p id="intro-text">At SitePro Craft, we specialize in providing comprehensive digital solutions that help you establish and elevate your online presence. Whether you’re a small business owner, a content creator, or an entrepreneur, we offer a range of services designed to make your brand stand out in the digital world.</p>
-                                <div id="full-text" style="display: none;">
-                                    <p>Our Services:</p>
-                                    <p><strong>Custom Website Design & Development:</strong> Your website is often the first impression customers have of your business, so it needs to be professional, functional, and visually appealing. At SitePro Craft, we create custom websites that are not only aesthetically pleasing but also fully responsive, ensuring they look great on any device. From e-commerce sites to portfolios and corporate websites, we tailor each project to meet your specific needs and goals.</p>
-                                    <p><strong>Blog Creation & Management:</strong> Blogging is a powerful tool for engaging your audience, sharing expertise, and boosting your SEO. Our team can help you create a dynamic and engaging blog that aligns with your brand’s voice and objectives. We handle everything from design and layout to content strategy, ensuring your blog not only attracts readers but also keeps them coming back for more.</p>
-                                    <p><strong>Brand Identity & Logo Design:</strong> Your brand’s visual identity is crucial to its success. We offer brand identity services that include logo design, color schemes, typography, and other elements that make your brand unique. Our goal is to create a cohesive and memorable brand image that resonates with your target audience and sets you apart from the competition.</p>
-                                    <p><strong>Search Engine Optimization (SEO):</strong> What’s the use of a fantastic website if no one can find it? Our SEO services are designed to improve your website’s visibility in search engine results pages, driving organic traffic and increasing your chances of reaching potential customers. We use proven strategies and techniques to enhance your site’s ranking and performance.</p>
-                                    <p><strong>Social Media Management:</strong> Social media is a key component of modern marketing. We offer social media management services to help you build and maintain a strong presence on platforms like Facebook, Twitter, Instagram, and LinkedIn. From content creation and scheduling to engagement and analytics, we handle every aspect of your social media strategy.</p>
-                                    <p><strong>Content Writing & Copywriting:</strong> Quality content is essential for engaging your audience and conveying your message effectively. Our skilled writers can create compelling content for your website, blog, social media, and other marketing materials. Whether you need informative articles, persuasive sales copy, or creative content, we deliver high-quality writing that captures your brand’s voice.</p>
-                                    <p>Additional Services:</p>
-                                    <ul>
-                                        <li>Website Maintenance & Updates</li>
-                                        <li>Email Marketing Campaigns</li>
-                                        <li>Graphic Design & Multimedia</li>
-                                        <li>Analytics & Performance Reporting</li>
-                                    </ul>
-                                    <p>Why Choose Us?</p>
-                                    <ul>
-                                        <li><strong>Personalized Approach:</strong> We take the time to understand your business and its unique needs, ensuring that our solutions are tailored specifically to you.</li>
-                                        <li><strong>Expert Team:</strong> Our team consists of experienced professionals with a deep understanding of digital marketing, web development, and design.</li>
-                                        <li><strong>Commitment to Quality:</strong> We pride ourselves on delivering high-quality work that exceeds your expectations and achieves your goals.</li>
-                                        <li><strong>Customer Satisfaction:</strong> Your satisfaction is our priority. We work closely with you throughout the process to ensure that the final result meets your needs and desires.</li>
-                                    </ul>
-                                    <p>At SitePro Craft, we are dedicated to helping you succeed in the digital landscape. Let us partner with you to create a powerful online presence that drives growth and achieves your objectives. Contact us today to learn more about how we can assist you with your digital needs.</p>
-                                </div>
-                                <button id="toggle-text">Show More</button>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- FAQ -->
-        <div id="faq-wrapper">
-            <div class="container">
-                <section id="faq">
-                    <h2>Frequently Asked Questions</h2>
-                    <div class="faq">
-                        <h3>What services do you offer?</h3>
-                        <div class="answer">
-                            <p>We offer a range of digital services including website design and development, SEO, content writing, social media management, and more. You can find detailed information about our services above.</p>
-                        </div>
-                        <h3>How can I contact you?</h3>
-                        <div class="answer">
-                            <p>You can reach us via the contact form on our website, email us directly at info@siteprocraft.com, or give us a call at (123) 456-7890.</p>
-                        </div>
-                        <h3>What is your pricing structure?</h3>
-                        <div class="answer">
-                            <p>Our pricing varies depending on the scope and complexity of the project. We offer custom quotes tailored to your specific needs. Please contact us for more details.</p>
-                        </div>
-                        <h3>Do you offer ongoing support?</h3>
-                        <div class="answer">
-                            <p>Yes, we offer ongoing support and maintenance services to ensure your website and digital assets continue to perform optimally. We can discuss support options during our initial consultation.</p>
-                        </div>
-                    </div>
-
-                    <section id="faq-form">
-                        <h2>Have a Question?</h2>
-                        <form id="question-form">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" required />
-
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required />
-
-                            <label for="question">Your Question:</label>
-                            <textarea id="question" name="question" rows="5" required></textarea>
-
-                            <button type="submit">Submit Question</button>
-                            <div id="form-message"></div>
-                        </form>
-                    </section>
-                </section>
-            </div>
-        </div>
-
-<!-- Footer -->
-<div id="footer-wrapper">
-    <footer id="footer" class="container">
-        <div style="background-color: lightblue; padding: 20px;">
-            <div class="row">
-                <div class="col-6 col-12-medium">
-                    <section class="widget links">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#footer">About Us</a></li>
-                            <li><a href="#faq">FAQ</a></li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="col-6 col-12-medium">
-                    <section class="widget contact">
-                        <h3>Contact Us</h3>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <h4>Address</h4>
-                                <p>
-                                    <a href="https://www.google.com/maps/place/Chinkipora,+Sopore+193201/@34.2949633,74.456476,15z/data=!3m1!4b1!4m15!1m8!3m7!1s0x38e1092499ffa89d:0x71784e3de429923f!2sSopore+193201!3b1!8m2!3d34.2867629!4d74.4624013!16zL20vMGN3aDhy!3m5!1s0x38e10949ba617ba9:0x5cf3d114652367f9!8m2!3d34.2959411!4d74.4770679!16s%2Fg%2F12lldqdr2?entry=ttu" target="_blank">
-                                        NH701  BARAMULLA Road, Sopore, J&K India
-                                    </a>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <h4>Email</h4>
-                                <p><a href="mailto:contact@siteprocraft.com">contact@siteprocraft.com</a></p>
-                            </div>
-                            <div class="contact-item">
-                                <h4>Phone</h4>
-                                <p><a href="tel:+918082196213">+91 8082 196 213</a></p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <section class="widget about-us">
-                        <h3>About Us</h3>
-                        <p>Welcome to SitePro Craft! We are a dedicated team of digital experts passionate about helping businesses thrive online. Our mission is to provide high-quality web solutions tailored to your unique needs. With years of experience in the industry, we deliver exceptional results that drive growth and success. Learn more about our services and how we can assist you by exploring our website or contacting us directly.</p>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <section class="widget social-media">
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <li><a href="https://www.linkedin.com/in/musaibamin/" target="_blank">LinkedIn</a></li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <section class="widget copyright">
-                        <p>&copy; 2024 SitePro Craft. All rights reserved. <a href="Privacy-policy.html" target="_blank">Privacy policy</a></p>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-
-
- 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
