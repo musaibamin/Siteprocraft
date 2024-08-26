@@ -284,12 +284,81 @@
                 <h3>Blog Management</h3>
                 <p>24/7 technical assistance.</p>
             </div>
-            <!-- New Service Item for API Creation -->
             <div class="service-item">
                 <i class="icon-api"></i>
                 <h3>API Development</h3>
-                <p>Building robust APIs for seamless integration.</p>
+                <!-- Short description initially visible -->
+                <p class="short-description">Building robust APIs for seamless integration.</p>
+                <!-- Detailed description initially hidden -->
+                <p class="detailed-description" style="display: none;">
+                    We specialize in creating APIs that are reliable, scalable, and easy to integrate. 
+                    Our team of experts focuses on developing RESTful services that meet the highest 
+                    industry standards, ensuring smooth communication between different software systems. 
+                    <br><br>
+                    Our comprehensive approach covers:
+                    <ul>
+                        <li>API Design and Architecture: Crafting APIs with a strong foundation.</li>
+                        <li>Development and Testing: Rigorous testing for functionality and security.</li>
+                        <li>Documentation and Support: Detailed documentation and ongoing support.</li>
+                    </ul>
+                    By leveraging the latest technologies and best practices, we deliver APIs that facilitate 
+                    seamless integration and enhance the efficiency of your software solutions.
+                </p>
+                <!-- More/Less link to toggle description visibility -->
+                <a href="#" class="toggle-more">More</a>
             </div>
+            
+            <style>
+            .service-item {
+                position: relative;
+                text-align: left;
+            }
+            
+            .toggle-more {
+                color: #007BFF;
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+            }
+            
+            .toggle-more:hover {
+                text-decoration: underline;
+            }
+            
+            .detailed-description ul {
+                margin-top: 10px;
+                padding-left: 20px;
+            }
+            </style>
+            
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggleLinks = document.querySelectorAll('.toggle-more');
+            
+                toggleLinks.forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default anchor click behavior
+                        const serviceItem = this.closest('.service-item');
+                        const detailedDescription = serviceItem.querySelector('.detailed-description');
+                        const shortDescription = serviceItem.querySelector('.short-description');
+            
+                        if (detailedDescription.style.display === 'none') {
+                            // Show detailed description and update link text to "Less"
+                            detailedDescription.style.display = 'block';
+                            shortDescription.style.display = 'none';
+                            this.textContent = 'Less';
+                        } else {
+                            // Hide detailed description and update link text to "More"
+                            detailedDescription.style.display = 'none';
+                            shortDescription.style.display = 'block';
+                            this.textContent = 'More';
+                        }
+                    });
+                });
+            });
+            </script>
+            
         </div>
     </section>
     
