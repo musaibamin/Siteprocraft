@@ -285,7 +285,7 @@
                 <p>24/7 technical assistance.</p>
             </div>
             <div class="service-item">
-                <i class="icon-api"></i>
+                <i class="icon-api" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
                 <h3>API Development</h3>
                 <!-- Short description initially visible -->
                 <p class="short-description">Building robust APIs for seamless integration.</p>
@@ -293,7 +293,7 @@
                 <p class="detailed-description" style="display: none;">
                     We specialize in creating APIs that are reliable, scalable, and easy to integrate. 
                     Our team of experts focuses on developing RESTful services that meet the highest 
-                    industry standards, ensuring smooth communication between different software systems. 
+                    industry standards, ensuring smooth communication between different software systems.
                     <br><br>
                     Our comprehensive approach covers:
                     <ul>
@@ -316,6 +316,18 @@
                 flex-direction: column; /* Stack children vertically */
                 align-items: center; /* Center align children horizontally */
                 justify-content: center; /* Center align children vertically */
+                padding: 20px;
+                background-color: #f9f9f9; /* Light grey background */
+                border-radius: 8px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                max-width: 400px; /* Limit the width for a professional layout */
+                margin: auto; /* Center the service item horizontally */
+            }
+            
+            .service-item h3 {
+                margin-bottom: 10px; /* Spacing below the header */
+                font-size: 24px; /* Larger font size for the header */
+                color: #333; /* Darker color for text */
             }
             
             .toggle-more {
@@ -324,6 +336,7 @@
                 display: inline-block;
                 margin-top: 10px;
                 text-decoration: none;
+                font-weight: bold; /* Make the link bold */
             }
             
             .toggle-more:hover {
@@ -332,16 +345,15 @@
             
             .detailed-description ul {
                 margin-top: 10px;
-                padding-left: 0; /* Remove left padding to center align the list */
-                list-style-position: inside; /* Center align list items */
+                padding-left: 20px;
+                text-align: left; /* Align list items to the left */
             }
             
-            .detailed-description {
+            .detailed-description, .short-description {
                 text-align: center; /* Center align text */
-            }
-            
-            .short-description {
-                text-align: center; /* Center align text */
+                font-size: 16px; /* Consistent font size */
+                line-height: 1.6; /* Improve readability with line height */
+                color: #555; /* Softer color for body text */
             }
             </style>
             
@@ -371,6 +383,7 @@
                 });
             });
             </script>
+            
             
         </div>
     </section>
