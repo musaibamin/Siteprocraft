@@ -311,7 +311,11 @@
             <style>
             .service-item {
                 position: relative;
-                text-align: left;
+                text-align: center; /* Center align text */
+                display: flex;
+                flex-direction: column; /* Stack children vertically */
+                align-items: center; /* Center align children horizontally */
+                justify-content: center; /* Center align children vertically */
             }
             
             .toggle-more {
@@ -328,7 +332,16 @@
             
             .detailed-description ul {
                 margin-top: 10px;
-                padding-left: 20px;
+                padding-left: 0; /* Remove left padding to center align the list */
+                list-style-position: inside; /* Center align list items */
+            }
+            
+            .detailed-description {
+                text-align: center; /* Center align text */
+            }
+            
+            .short-description {
+                text-align: center; /* Center align text */
             }
             </style>
             
