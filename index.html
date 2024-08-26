@@ -280,9 +280,117 @@
                 <p>Custom software solutions.</p>
             </div>
             <div class="service-item">
-                <i class="icon-support"></i>
+                <i class="icon-blog" style="font-size: 50px; color: #28a745; margin-bottom: 15px;"></i>
                 <h3>Blog Management</h3>
-                <p>24/7 technical assistance.</p>
+                
+                <!-- Short description initially visible -->
+                <p class="short-description">We create and manage blogs of any kind to boost your online presence.</p>
+                
+                <!-- Detailed description initially hidden -->
+                <div class="detailed-description" style="display: none;">
+                    <h4>Comprehensive Blog Solutions</h4>
+                    <p>Our blog management services are tailored to help you establish a strong online presence. We handle everything from content creation to SEO optimization to ensure your blog reaches the right audience and drives engagement.</p>
+                    
+                    <h4>Our Expertise</h4>
+                    <ul>
+                        <li><strong>Content Creation:</strong> Crafting compelling and relevant blog posts to engage your audience.</li>
+                        <li><strong>SEO Optimization:</strong> Optimizing your blog for search engines to increase visibility and traffic.</li>
+                        <li><strong>Editorial Calendar Management:</strong> Planning and scheduling posts to maintain a consistent publishing schedule.</li>
+                        <li><strong>Analytics and Reporting:</strong> Monitoring blog performance and providing detailed reports to track growth and engagement.</li>
+                    </ul>
+                    
+                    <p>By leveraging our expertise, we ensure your blog not only attracts visitors but also retains them with high-quality, engaging content.</p>
+                </div>
+                
+                <!-- More/Less link to toggle description visibility -->
+                <a href="#" class="toggle-more">More</a>
+            </div>
+            
+            <style>
+            .service-item {
+                position: relative;
+                text-align: center; /* Center align heading and icon */
+                display: flex;
+                flex-direction: column; /* Stack children vertically */
+                align-items: center; /* Center align children horizontally */
+                padding: 20px;
+                background-color: #f9f9f9; /* Light grey background */
+                border-radius: 8px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                max-width: 400px; /* Limit the width for a professional layout */
+                margin: auto; /* Center the service item horizontally */
+            }
+            
+            .service-item h3 {
+                margin-bottom: 10px; /* Spacing below the header */
+                font-size: 24px; /* Larger font size for the header */
+                color: #333; /* Darker color for text */
+            }
+            
+            .service-item h4 {
+                font-size: 18px; /* Subheader size */
+                margin-top: 15px; /* Space above subheaders */
+                color: #28a745; /* Match the icon color for branding */
+            }
+            
+            .toggle-more {
+                color: #28a745;
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+                font-weight: bold; /* Make the link bold */
+            }
+            
+            .toggle-more:hover {
+                text-decoration: underline;
+            }
+            
+            .detailed-description ul {
+                margin-top: 10px;
+                padding-left: 20px;
+                text-align: left; /* Align list items to the left */
+                list-style-type: disc; /* Bullet points for the list */
+                margin-bottom: 15px; /* Space below the list */
+            }
+            
+            .detailed-description p, .short-description {
+                text-align: justify; /* Justify text */
+                font-size: 16px; /* Consistent font size */
+                line-height: 1.6; /* Improve readability with line height */
+                color: #555; /* Softer color for body text */
+                margin: 0; /* Remove default margins for consistent spacing */
+            }
+            
+            </style>
+            
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggleLinks = document.querySelectorAll('.toggle-more');
+            
+                toggleLinks.forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default anchor click behavior
+                        const serviceItem = this.closest('.service-item');
+                        const detailedDescription = serviceItem.querySelector('.detailed-description');
+                        const shortDescription = serviceItem.querySelector('.short-description');
+            
+                        if (detailedDescription.style.display === 'none') {
+                            // Show detailed description and update link text to "Less"
+                            detailedDescription.style.display = 'block';
+                            shortDescription.style.display = 'none';
+                            this.textContent = 'Less';
+                        } else {
+                            // Hide detailed description and update link text to "More"
+                            detailedDescription.style.display = 'none';
+                            shortDescription.style.display = 'block';
+                            this.textContent = 'More';
+                        }
+                    });
+                });
+            });
+            </script>
+            
             </div>
             <div class="service-item">
                 <i class="icon-api" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
