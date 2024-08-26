@@ -287,23 +287,25 @@
             <div class="service-item">
                 <i class="icon-api" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
                 <h3>API Development</h3>
+                
                 <!-- Short description initially visible -->
                 <p class="short-description">Building robust APIs for seamless integration.</p>
+                
                 <!-- Detailed description initially hidden -->
-                <p class="detailed-description" style="display: none;">
-                    We specialize in creating APIs that are reliable, scalable, and easy to integrate. 
-                    Our team of experts focuses on developing RESTful services that meet the highest 
-                    industry standards, ensuring smooth communication between different software systems.
-                    <br><br>
-                    Our comprehensive approach covers:
+                <div class="detailed-description" style="display: none;">
+                    <h4>Overview</h4>
+                    <p>Our APIs are designed to be reliable, scalable, and easy to integrate. We adhere to the highest industry standards to ensure smooth communication between software systems.</p>
+                    
+                    <h4>Our Approach</h4>
                     <ul>
-                        <li>API Design and Architecture: Crafting APIs with a strong foundation.</li>
-                        <li>Development and Testing: Rigorous testing for functionality and security.</li>
-                        <li>Documentation and Support: Detailed documentation and ongoing support.</li>
+                        <li><strong>API Design and Architecture:</strong> Crafting robust and flexible APIs.</li>
+                        <li><strong>Development and Testing:</strong> Ensuring functionality and security through rigorous testing.</li>
+                        <li><strong>Documentation and Support:</strong> Providing comprehensive documentation and continuous support.</li>
                     </ul>
-                    By leveraging the latest technologies and best practices, we deliver APIs that facilitate 
-                    seamless integration and enhance the efficiency of your software solutions.
-                </p>
+                    
+                    <p>By leveraging the latest technologies and best practices, our APIs enhance the efficiency of your software solutions and ensure seamless integration.</p>
+                </div>
+                
                 <!-- More/Less link to toggle description visibility -->
                 <a href="#" class="toggle-more">More</a>
             </div>
@@ -315,7 +317,6 @@
                 display: flex;
                 flex-direction: column; /* Stack children vertically */
                 align-items: center; /* Center align children horizontally */
-                justify-content: center; /* Center align children vertically */
                 padding: 20px;
                 background-color: #f9f9f9; /* Light grey background */
                 border-radius: 8px; /* Rounded corners */
@@ -328,6 +329,12 @@
                 margin-bottom: 10px; /* Spacing below the header */
                 font-size: 24px; /* Larger font size for the header */
                 color: #333; /* Darker color for text */
+            }
+            
+            .service-item h4 {
+                font-size: 18px; /* Subheader size */
+                margin-top: 15px; /* Space above subheaders */
+                color: #007BFF; /* Match the icon color for branding */
             }
             
             .toggle-more {
@@ -347,9 +354,11 @@
                 margin-top: 10px;
                 padding-left: 20px;
                 text-align: left; /* Align list items to the left */
+                list-style-type: disc; /* Bullet points for the list */
+                margin-bottom: 15px; /* Space below the list */
             }
             
-            .detailed-description, .short-description {
+            .detailed-description p, .short-description {
                 text-align: justify; /* Justify text */
                 font-size: 16px; /* Consistent font size */
                 line-height: 1.6; /* Improve readability with line height */
