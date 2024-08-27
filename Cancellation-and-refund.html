@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
-    <title>Cancellation and Refund - SiteProCraft</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancellation and Refund Policy - SiteProCraft</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -17,132 +17,162 @@
             background-color: #f4f4f4;
         }
 
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Page Wrapper */
         #page-wrapper {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
+        /* Header Styles */
         header {
             background-color: #0b7883;
             color: #fff;
             padding: 15px 0;
             text-align: center;
-
         }
 
-        header a {
-            color: #fff;
-            text-decoration: none;
-
+        header h1 {
+            font-family: 'Oleo Script', cursive;
+            margin: 0;
         }
-        header h1{
-            color: #fff;
-            font-family: 'Oleo Script', system-ui;
-            
+
+        nav {
+            margin-top: 10px;
         }
 
         nav ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline-block;
             margin: 0 15px;
         }
 
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 10px;
-            list-style-type: none;
-        }
-
-        nav ul li:hover ul {
-            display: block;
-        }
-
+        /* Content Styles */
         .content {
             background: #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
         }
 
-        .content h1 {
+        .content h2 {
             color: #0b7883;
             margin-top: 0;
         }
 
-        .content p {
+        .content p, .content ul {
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
+        .content ul {
+            padding-left: 20px;
+        }
+
+        /* Footer Styles */
         footer {
             background-color: #0b7883;
             color: #fff;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
+            margin-top: 40px;
         }
 
-        footer p {
-            margin: 0;
+        footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        footer a {
+        footer .footer-content p {
+            margin: 5px 0;
+        }
+
+        footer .footer-content a {
             color: #fff;
-            text-decoration: none;
         }
 
-        footer a:hover {
+        footer .footer-content a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="page-wrapper">
-
         <!-- Header -->
         <header>
             <h1><a href="index.html">SiteProCraft</a></h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <!-- <li><a href="index.html">Services</a></li>
-                    <li><a href="index.html">About Us</a></li> -->
-                    <!-- <li>
-                        <a href="#">Policies</a>
-                        <ul>
-                            <li><a href="cancellation-and-refund.html">Cancellation and Refund</a></li>
-                            <li><a href="shipping-and-delivery.html">Shipping & Delivery</a></li>
-                        </ul>
-                    </li> -->
+                    <li><a href="cancellation-and-refund.html">Cancellation and Refund</a></li>
                 </ul>
             </nav>
         </header>
 
         <!-- Main Content -->
         <div class="content">
-            <h1>Cancellation and Refund Policy</h1>
-            <p>Welcome to SiteProCraft's Cancellation and Refund Policy page. Here you will find comprehensive information regarding our policies on cancellations and refunds.</p>
-            <p>Our goal is to ensure that your experience with SiteProCraft is smooth and satisfactory. Please read the following guidelines carefully:</p>
+            <h2>Cancellation and Refund Policy</h2>
+            <p>At SiteProCraft, we prioritize customer satisfaction and aim to provide a seamless experience with every purchase. We understand that circumstances can change, and you may need to cancel an order or request a refund. This policy outlines the terms and conditions for cancellations and refunds.</p>
+            <h3>1. Cancellation Policy</h3>
             <ul>
-                <li><strong>Cancellation Policy:</strong> You can cancel your order within 24 hours of placing it. After this period, cancellations may not be possible.</li>
-                <li><strong>Refund Policy:</strong> Refunds are processed within 5-7 business days after the request has been approved. Please review our terms for more details.</li>
+                <li><strong>Order Cancellation by Customer:</strong> Customers can cancel their orders within <strong>24 hours</strong> of placing them. To cancel an order, please contact our customer support team via email at <a href="mailto:contact@siteprocraft.com">contact@siteprocraft.com</a> or call us at <a href="tel:+918082196213">+91 8082 196 213</a>. Cancellations are only accepted if the order has not been processed or shipped. Once the product is in the shipping process, cancellations are not possible.</li>
+                <li><strong>Order Cancellation by SiteProCraft:</strong> We reserve the right to cancel any order for reasons including but not limited to: product unavailability, errors in pricing or product information, or suspicious or fraudulent activities detected. In such cases, customers will be notified via email or phone, and a full refund will be processed immediately.</li>
             </ul>
-            <p>If you have any questions or need further assistance, please contact our support team.</p>
+            <h3>2. Refund Policy</h3>
+            <ul>
+                <li><strong>Eligibility for Refund:</strong> Refunds are issued under the following conditions: if the customer cancels the order within the specified 24-hour window, if the product received is damaged, defective, or not as described (reported within <strong>7 days</strong> of receiving the product), or if SiteProCraft cancels the order due to unforeseen circumstances.</li>
+                <li><strong>Non-Refundable Items:</strong> Certain products are non-refundable, including digital goods or downloadable products once they have been accessed or downloaded, personalized or custom-made items unless they are defective or damaged, and clearance or final sale items.</li>
+                <li><strong>Refund Process:</strong> Refunds will be processed through the original payment method used during the purchase. Refunds are typically processed within <strong>5-7 business days</strong> after approval. The time it takes for the refund to appear in your account depends on your bank or card issuer.</li>
+            </ul>
+            <h3>3. Exchange Policy</h3>
+            <p>We do not offer direct exchanges. If you wish to exchange a product, please follow the refund process for the original purchase and place a new order for the desired item.</p>
+            <h3>4. How to Request a Refund or Cancellation</h3>
+            <p>To request a refund or cancel your order, please contact our customer support team at:</p>
+            <p>Email: <a href="mailto:contact@siteprocraft.com">contact@siteprocraft.com</a></p>
+            <p>Phone: <a href="tel:+918082196213">+91 8082 196 213</a></p>
+            <p>Include your order number, the reason for the cancellation or refund, and any supporting documentation (such as photos of a defective product).</p>
+            <h3>5. Changes to this Policy</h3>
+            <p>SiteProCraft reserves the right to modify or update this Cancellation and Refund Policy at any time. We encourage you to review this policy periodically for any changes.</p>
+            <h3>6. Contact Us</h3>
+            <p>If you have any questions or need further clarification about our Cancellation and Refund Policy, please reach out to our customer service team at the contact details provided above.</p>
         </div>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2024 SiteProCraft. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2024 SiteProCraft. All rights reserved.</p>
+                <p>NH1 Baramulla Road, Baramulla, Jammu & Kashmir, 193201</p>
+                <p>Contact us: <a href="mailto:contact@siteprocraft.com">contact@siteprocraft.com</a> | Phone: <a href="tel:+918082196213">+91 8082 196 213</a></p>
+            </div>
         </footer>
-
     </div>
 </body>
 
