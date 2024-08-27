@@ -240,6 +240,21 @@
         .social-icons a:hover {
             color: #0078d4;
         }
+
+        /* Language Selector CSS */
+        .language-selector {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .language-selector label {
+            color: white;
+            font-size: 16px;
+            margin-right: 8px;
+        }
+        .language-selector select {
+            padding: 5px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
@@ -300,132 +315,137 @@
                             <p>By leveraging the latest technologies and best practices, our APIs enhance the efficiency of your software solutions and ensure seamless integration.</p>
                         </div>
                         
-                        <!-- More/Less link to toggle description visibility -->
-                        <a href="#" class="toggle-more">More</a>
+                        <!-- 'Read more' link -->
+                        <a href="#" class="read-more" style="color: #007BFF; cursor: pointer;">Read more</a>
                     </div>
-            
-                    <!-- Blog Development Block -->
-                    <div class="service-item">
-                        <i class="icon-blog" style="font-size: 50px; color: #28a745; margin-bottom: 15px;"></i>
-                        <h3>Blog Development</h3>
-                        
-                        <!-- Short description initially visible -->
-                        <p class="short-description">We create and develop blogs of any kind to enhance your digital presence.</p>
-                        
-                        <!-- Detailed description initially hidden -->
-                        <div class="detailed-description" style="display: none;">
-                            <h4>Comprehensive Blog Development Solutions</h4>
-                            <p>Our blog development services are designed to help you create and maintain a robust digital presence. We manage everything from blog setup to advanced customization to ensure your blog meets your specific needs and engages your audience effectively.</p>
-                            
-                            <h4>Our Expertise</h4>
-                            <ul>
-                                <li><strong>Custom Blog Creation:</strong> Developing blogs tailored to your unique requirements and brand identity.</li>
-                                <li><strong>Design and Layout:</strong> Creating visually appealing and user-friendly blog designs.</li>
-                                <li><strong>Functionality and Features:</strong> Implementing advanced features and functionalities to enhance user experience.</li>
-                                <li><strong>Content Management Systems:</strong> Integrating robust CMS solutions for easy content management and updates.</li>
-                            </ul>
-                            
-                            <p>With our expertise, your blog will not only attract visitors but also provide a high-quality experience that keeps them coming back.</p>
-                        </div>
-                        
-                        <!-- More/Less link to toggle description visibility -->
-                        <a href="#" class="toggle-more">More</a>
-                    </div>
-            
-                    <!-- Video Editing Block -->
-                    <div class="service-item">
-                        <i class="icon-development"></i>
-                        <h3>Video Editing</h3>
-                        <p>Custom software solutions.</p>
-                    </div>
-                </div>
-            </section>
-            
-            
+
         </div>
     </section>
-    
 
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>At SitePro Craft, we are passionate creators who bring your digital visions to life. We excel in designing intuitive websites and robust APIs, while also crafting engaging content. Our mission is to empower your brand with cutting-edge digital solutions.</p>
+        <p>We are a team of dedicated professionals committed to delivering top-notch digital solutions that help businesses thrive in the online space.</p>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-
-    <div class="footer-content">
-     
-    </div>
-
-        <div class="footer-content"><p>Email: <a href="mailto:contact@siteprocraft.com">contact@siteprocraft.com</a> | Address: NH1 Baramulla Road, Sopore, Jammu and Kashmir 193201</p>
-
-            <p>&copy; 2024 SitePro craft. All rights reserved.<a href="Privacy-policy.html"> Privacy and Policy</a> | <a href="Terms-and-conditions.html"> Terms and Conditions</a> | <a href="Cancellation-and-refund.html"> Cancellation and Refund </a> | <a href="Shipping-and-delivery.html"> Shipping and Delivery </a></p>
+        <div class="footer-content">
+            <p>&copy; 2023 SitePro Craft. All rights reserved.</p>
             <div class="social-icons">
-                <a href="#"><i class="icon-facebook"></i></a>
-                <a href="#"><i class="icon-twitter"></i></a>
-                <a href="#"><i class="icon-linkedin"></i></a>
+                <a href="#" class="icon-facebook"></a>
+                <a href="#" class="icon-twitter"></a>
+                <a href="#" class="icon-linkedin"></a>
             </div>
         </div>
     </footer>
-</body>
 
-
-
-    <!-- Scripts -->
+    <!-- Language Selector HTML -->
+    <div class="language-selector">
+        <label for="language-select">Select Language:</label>
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <!-- Add more languages as needed -->
+        </select>
+    </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textArray = [
-                "Welcome to SiteProCraft!",
-                "Your trusted partner in web development, software development, and API intergations.",
-                "We bring your ideas to life.",
-                "Creating stunning and functional websites.",
-                "Let's build something great together.",
-                "Crafting sites with passion and precision."
-            ];
-            let textIndex = 0;
-            let charIndex = 0;
-            const typingSpeed = 80; // typing speed in milliseconds
-            const erasingSpeed = 20; // erasing speed in milliseconds
-            const delayBetweenTexts = 1000; // delay between texts in milliseconds
-            const delayAfterErasing = 500; // delay after erasing in milliseconds
-            const typedTextElement = document.getElementById("typed-text");
+        // Typed.js Effect
+        document.addEventListener('DOMContentLoaded', function () {
+            var options = {
+                strings: ["Solutions tailored to your needs.", "Innovative solutions for your business."],
+                typeSpeed: 50,
+                backSpeed: 25,
+                backDelay: 2000,
+                loop: true
+            };
 
-            function type() {
-                if (charIndex < textArray[textIndex].length) {
-                    typedTextElement.textContent += textArray[textIndex].charAt(charIndex);
-                    charIndex++;
-                    setTimeout(type, typingSpeed);
-                } else {
-                    setTimeout(erase, delayBetweenTexts);
-                }
-            }
-
-            function erase() {
-                if (charIndex > 0) {
-                    typedTextElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(erase, erasingSpeed);
-                } else {
-                    textIndex = (textIndex + 1) % textArray.length;
-                    setTimeout(type, delayAfterErasing);
-                }
-            }
-
-            type(); // start the typing effect
-
-            // Toggle full text visibility
-
+            var typed = new Typed("#typed-text", options);
         });
-</script>
+
+        // Read More Functionality
+        const readMoreLinks = document.querySelectorAll('.read-more');
+        readMoreLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const detailedDescription = this.previousElementSibling;
+                if (detailedDescription.style.display === 'none') {
+                    detailedDescription.style.display = 'block';
+                    this.textContent = 'Read less';
+                } else {
+                    detailedDescription.style.display = 'none';
+                    this.textContent = 'Read more';
+                }
+            });
+        });
+
+        // Language Selector Script
+        document.getElementById('language-select').addEventListener('change', function () {
+            var selectedLanguage = this.value;
+            console.log("Selected language:", selectedLanguage); // For debugging
+
+            // Function to translate elements
+            function translateText() {
+                var elementsToTranslate = document.querySelectorAll("[data-translate-key]");
+                elementsToTranslate.forEach(element => {
+                    var key = element.getAttribute("data-translate-key");
+                    if (translations[selectedLanguage] && translations[selectedLanguage][key]) {
+                        element.textContent = translations[selectedLanguage][key];
+                    } else {
+                        console.warn(`No translation found for key: ${key} in language: ${selectedLanguage}`);
+                    }
+                });
+            }
+
+            translateText(); // Initial translation on language change
+        });
+
+        // Translations data
+        var translations = {
+            "en": {
+                "welcome-message": "Welcome to SitePro Craft!",
+                "learn-more": "Learn More",
+                "services-header": "Our Services",
+                "about-us-header": "About Us",
+                "about-us-content": "We are a team of dedicated professionals committed to delivering top-notch digital solutions that help businesses thrive in the online space.",
+                "contact-us-header": "Contact Us",
+                "send-message": "Send Message",
+                "api-description-short": "Building robust APIs for seamless integration.",
+                "api-description-detail": "Our APIs are designed to be reliable, scalable, and easy to integrate. We adhere to the highest industry standards to ensure smooth communication between software systems."
+            },
+            "es": {
+                "welcome-message": "¡Bienvenido a SitePro Craft!",
+                "learn-more": "Aprender más",
+                "services-header": "Nuestros Servicios",
+                "about-us-header": "Sobre nosotros",
+                "about-us-content": "Somos un equipo de profesionales dedicados comprometidos a ofrecer soluciones digitales de primer nivel que ayudan a las empresas a prosperar en el espacio en línea.",
+                "contact-us-header": "Contáctenos",
+                "send-message": "Enviar mensaje",
+                "api-description-short": "Construyendo APIs robustas para una integración perfecta.",
+                "api-description-detail": "Nuestras API están diseñadas para ser fiables, escalables y fáciles de integrar. Nos adherimos a los más altos estándares de la industria para garantizar una comunicación fluida entre sistemas de software."
+            },
+            "fr": {
+                "welcome-message": "Bienvenue chez SitePro Craft!",
+                "learn-more": "En savoir plus",
+                "services-header": "Nos Services",
+                "about-us-header": "À propos de nous",
+                "about-us-content": "Nous sommes une équipe de professionnels dévoués, engagés à fournir des solutions numériques de premier ordre qui aident les entreprises à prospérer dans l'espace en ligne.",
+                "contact-us-header": "Contactez-nous",
+                "send-message": "Envoyer le message",
+                "api-description-short": "Construire des API robustes pour une intégration transparente.",
+                "api-description-detail": "Nos API sont conçues pour être fiables, évolutives et faciles à intégrer. Nous adhérons aux normes les plus élevées de l'industrie pour assurer une communication fluide entre les systèmes logiciels."
+            }
+        };
+    </script>
+</body>
 </html>
