@@ -8,36 +8,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset and Global Styles */
+        /* Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+    
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             background-color: #f5f5f5;
             line-height: 1.6; 
         }
-
+    
         a {
             text-decoration: none;
             color: #0078d4;
         }
-
+    
         ul {
             list-style: none;
         }
-
+    
         /* Header */
         header {
             background-color: #fff;
             border-bottom: 1px solid #e1e1e1;
             padding: 15px 20px;
         }
-
+    
         nav {
             display: flex;
             justify-content: space-between;
@@ -45,35 +45,35 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
+    
         .logo {
             font-size: 24px;
             font-weight: bold;
             color: #171717;
             font-family: 'Oleo Script', system-ui;
         }
-
+    
         .nav-links {
             display: flex;
             gap: 20px;
         }
-
+    
         .nav-links a {
             font-size: 16px;
             padding: 10px;
             transition: color 0.3s ease;
         }
-
+    
         .nav-links a:hover {
             color: #005a9e;
         }
-
+    
         .search-bar input {
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-
+    
         /* Hero Section */
         .hero {
             background-color: #0078d4;
@@ -81,17 +81,17 @@
             padding: 100px 20px;
             text-align: center;
         }
-
+    
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
         }
-
+    
         .hero p {
             font-size: 20px;
             margin-bottom: 30px;
         }
-
+    
         .btn-primary {
             background-color: white;
             color: #0078d4;
@@ -100,30 +100,37 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
-
+    
         .btn-primary:hover {
             background-color: #e1e1e1;
         }
-
+    
         /* Services Section */
         .services {
             padding: 60px 20px;
             text-align: center;
         }
-
+    
         .services h2 {
             font-size: 36px;
             margin-bottom: 40px;
             color: #333;
         }
-
+    
         .service-grid {
             display: flex;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
         }
-
+    
+        .service-container {
+            display: flex; /* Use Flexbox to create a row layout */
+            justify-content: space-between; /* Distribute space evenly between the items */
+            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+            gap: 20px; /* Space between service items */
+        }
+    
         .service-item {
             background-color: white;
             padding: 20px;
@@ -131,65 +138,83 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: left;
+            flex: 1; /* Make each item take equal space */
+            min-width: 250px; /* Minimum width for each service item */
+            max-width: 300px; /* Maximum width for each service item */
+            border: 1px solid #ddd; /* Optional: Add border for separation */
+            padding: 15px; /* Padding inside each service block */
+            box-sizing: border-box; /* Include padding and border in width calculation */
         }
-
+    
         .service-item i {
             font-size: 36px;
             color: #0078d4;
             margin-bottom: 15px;
+            display: block;
+            margin: 0 auto 15px auto; /* Center the icons and add margin below */
         }
-
+    
         .service-item h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #333;
         }
-
-        .service-item p {
+    
+        .service-item p,
+        .service-item ul,
+        .service-item h4 {
             font-size: 16px;
             color: #555;
+            text-align: justify; /* Justify text in paragraphs, lists, and headers */
         }
-
+    
+        /* Ensure the 'More' links don't get in the way */
+        .toggle-more {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+    
         /* About Section */
         .about {
             padding: 60px 20px;
             text-align: center;
             background-color: #f5f5f5;
         }
-
+    
         .about h2 {
             font-size: 36px;
             margin-bottom: 20px;
             color: #333;
         }
-
+    
         .about p {
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto;
             color: #555;
         }
-
+    
          /* Work Showcase */
          .work-showcase {
             padding: 60px 20px;
             text-align: center;
             background-color: #fff;
         }
-
+    
         .work-showcase h2 {
             font-size: 36px;
             margin-bottom: 40px;
             color: #333;
         }
-
+    
         .work-gallery {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
-
+    
         .work-item {
             background-color: #f9f9f9;
             padding: 20px;
@@ -198,37 +223,37 @@
             width: 300px;
             text-align: left;
         }
-
+    
         .work-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 15px;
         }
-
+    
         .work-item h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #333;
         }
-
+    
         .work-item p {
             font-size: 16px;
             color: #555;
         }
-
+    
         /* Contact Section */
         .contact {
             padding: 60px 20px;
             text-align: center;
         }
-
+    
         .contact h2 {
             font-size: 36px;
             margin-bottom: 40px;
             color: #333;
         }
-
+    
         .contact form {
             max-width: 600px;
             margin: 0 auto;
@@ -236,7 +261,7 @@
             flex-direction: column;
             gap: 20px;
         }
-
+    
         .contact form input,
         .contact form textarea {
             padding: 15px;
@@ -244,12 +269,12 @@
             border-radius: 4px;
             font-size: 16px;
         }
-
+    
         .contact form textarea {
             resize: none;
             height: 150px;
         }
-
+    
         .contact form button {
             background-color: #0078d4;
             color: white;
@@ -260,11 +285,11 @@
             border: none;
             cursor: pointer;
         }
-
+    
         .contact form button:hover {
             background-color: #005a9e;
         }
-
+    
         /* Footer */
         footer {
             background-color: #333;
@@ -272,22 +297,23 @@
             padding: 20px;
             text-align: center;
         }
-
+    
         .footer-content p {
             margin-bottom: 10px;
         }
-
+    
         .social-icons a {
             margin: 0 10px;
             font-size: 20px;
             color: white;
             transition: color 0.3s ease;
         }
-
+    
         .social-icons a:hover {
             color: #0078d4;
         }
     </style>
+    
 </head>
 <body>
     <header>
@@ -312,118 +338,115 @@
             <a href="#services" class="btn-primary">Learn More</a>
         </div>
     </section>
-
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            
-    <!-- Web Development Block -->
-        <div class="service-item">
-         <i class="icon-consulting" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
-         <h3>Web Development</h3>
-         <p class="short-description">Expert advice for your business.</p> 
-
-    <!-- Detailed description -->
-         <div class="detailed-description" style="display: none;">
-          <h4>Overview</h4>
-           <p>At SitePro Craft, our web development services are designed to meet the unique needs of your business. We offer a comprehensive range of solutions that ensure your website is both visually appealing and highly functional.</p>
-
-          <h4>Our Web Development Services Include</h4>
-           <p>We design and develop custom websites tailored to your business needs, ensuring an engaging and responsive user experience. From frontend and backend development to e-commerce solutions and CMS integration, our services cover all aspects of web development. We also focus on SEO and performance optimization to enhance your site’s visibility and functionality.</p>
-
-        <h4>Our Approach</h4>
-        <ul>
-            <li><strong>Custom Design and Development:</strong> Tailored websites designed to reflect your brand and meet your objectives.</li>
-            <li><strong>Responsive Layouts:</strong> Ensuring your site looks great on all devices, from desktops to mobile phones.</li>
-            <li><strong>Performance Optimization:</strong> Enhancing load times and functionality for a smooth user experience.</li>
-            <li><strong>Ongoing Support:</strong> Providing maintenance and updates to keep your website performing optimally.</li>
-        </ul>
-
-        <p>Our goal is to build websites that engage your audience and support your business goals through strategic design and technology.</p>
-    </div>
-
-    <!-- Toggle Link -->
-    <a href="#" class="toggle-more">More</a>
-</div>
-
-
-                    </div>
-            
-                    <!-- API Development Block - Moved Here -->
-                    <div class="service-item">
-                        <i class="icon-api" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
-                        <h3>API Development</h3>
-                        
-                        <!-- Short description initially visible -->
-                        <p class="short-description">Building robust APIs for seamless integration.</p>
-                        
-                        <!-- Detailed description initially hidden -->
-                        <div class="detailed-description" style="display: none;">
-                            <h4>Overview</h4>
-                            <p>Our APIs are designed to be reliable, scalable, and easy to integrate. We adhere to the highest industry standards to ensure smooth communication between software systems.</p>
-                            
-                            <h4>Our Approach</h4>
-                            <ul>
-                                <li><strong>API Design and Architecture:</strong> Crafting robust and flexible APIs.</li>
-                                <li><strong>Development and Testing:</strong> Ensuring functionality and security through rigorous testing.</li>
-                                <li><strong>Documentation and Support:</strong> Providing comprehensive documentation and continuous support.</li>
-                            </ul>
-                            
-                            <p>By leveraging the latest technologies and best practices, our APIs enhance the efficiency of your software solutions and ensure seamless integration.</p>
-                        </div>
-                        
-                        <!-- More/Less link to toggle description visibility -->
-                        <a href="#" class="toggle-more">More</a>
-                    </div>
-            
-                    <!-- Blog Development Block -->
-                    <div class="service-item">
-                        <i class="icon-blog" style="font-size: 50px; color: #28a745; margin-bottom: 15px;"></i>
-                        <h3>Blog Development</h3>
-                        
-                        <!-- Short description initially visible -->
-                        <p class="short-description">We create and develop blogs of any kind to enhance your digital presence.</p>
-                        
-                        <!-- Detailed description initially hidden -->
-                        <div class="detailed-description" style="display: none;">
-                            <h4>Comprehensive Blog Development Solutions</h4>
-                            <p>Our blog development services are designed to help you create and maintain a robust digital presence. We manage everything from blog setup to advanced customization to ensure your blog meets your specific needs and engages your audience effectively.</p>
-                            
-                            <h4>Our Expertise</h4>
-                            <ul>
-                                <li><strong>Custom Blog Creation:</strong> Developing blogs tailored to your unique requirements and brand identity.</li>
-                                <li><strong>Design and Layout:</strong> Creating visually appealing and user-friendly blog designs.</li>
-                                <li><strong>Functionality and Features:</strong> Implementing advanced features and functionalities to enhance user experience.</li>
-                                <li><strong>Content Management Systems:</strong> Integrating robust CMS solutions for easy content management and updates.</li>
-                            </ul>
-                            
-                            <p>With our expertise, your blog will not only attract visitors but also provide a high-quality experience that keeps them coming back.</p>
-                        </div>
-                        
-                        <!-- More/Less link to toggle description visibility -->
-                        <a href="#" class="toggle-more">More</a>
-                    </div>
-            
-                <!-- Video Editing Block -->
-                 <div class="service-item">
-                <i class="icon-video-editing" style="font-size: 50px; color: #ff5722; margin-bottom: 15px;"></i>
-                 <h3>Video Editing</h3>
-                 <p>Transforming your raw footage into polished, professional content.</p> 
-
-                <!-- Detailed description -->
-                  <div class="detailed-description" style="display: none;">
-                    <h4>Overview</h4>
-                    <p>At SitePro Craft, our video editing services are designed to make your footage shine. We provide high-quality editing that enhances the visual and auditory aspects of your videos, ensuring they are engaging and impactful.</p>
+    <body>
         
-                    <h4>Our Video Editing Services Include</h4>
-                    <p>We offer a range of video editing services, including cutting and trimming, color correction, sound editing, and visual effects. Whether it's a promotional video, a tutorial, or an event highlight, we tailor our services to meet your specific needs and help convey your message effectively.</p>
+        <!-- Service Section -->
+        <section>
+            <div class="service-container">
+                <!-- Web Development Block -->
+                <div class="service-item">
+                    <i class="icon-consulting" style="font-size: 50px; color: #007BFF;"></i>
+                    <h3>Web Development</h3>
+                    <p class="short-description">Expert advice for your business.</p> 
+    
+                    <!-- Detailed description -->
+                    <div class="detailed-description" style="display: none;">
+                        <h4>Overview</h4>
+                        <p>At SitePro Craft, our web development services are designed to meet the unique needs of your business. We offer a comprehensive range of solutions that ensure your website is both visually appealing and highly functional.</p>
+    
+                        <h4>Our Web Development Services Include</h4>
+                        <p>We design and develop custom websites tailored to your business needs, ensuring an engaging and responsive user experience. From frontend and backend development to e-commerce solutions and CMS integration, our services cover all aspects of web development. We also focus on SEO and performance optimization to enhance your site’s visibility and functionality.</p>
+    
+                        <h4>Our Approach</h4>
+                        <ul>
+                            <li><strong>Custom Design and Development:</strong> Tailored websites designed to reflect your brand and meet your objectives.</li>
+                            <li><strong>Responsive Layouts:</strong> Ensuring your site looks great on all devices, from desktops to mobile phones.</li>
+                            <li><strong>Performance Optimization:</strong> Enhancing load times and functionality for a smooth user experience.</li>
+                            <li><strong>Ongoing Support:</strong> Providing maintenance and updates to keep your website performing optimally.</li>
+                        </ul>
+    
+                        <p>Our goal is to build websites that engage your audience and support your business goals through strategic design and technology.</p>
+                    </div>
+    
+                    <!-- Toggle Link -->
+                    <a href="#" class="toggle-more">More</a>
                 </div>
-
-                <a href="#" class="toggle-more">More</a>
-</div>
-
+    
+                <!-- API Development Block -->
+                <div class="service-item">
+                    <i class="icon-api" style="font-size: 50px; color: #007BFF;"></i>
+                    <h3>API Development</h3>
+                    <p class="short-description">Building robust APIs for seamless integration.</p>
+    
+                    <!-- Detailed description -->
+                    <div class="detailed-description" style="display: none;">
+                        <h4>Overview</h4>
+                        <p>Our APIs are designed to be reliable, scalable, and easy to integrate. We adhere to the highest industry standards to ensure smooth communication between software systems.</p>
+    
+                        <h4>Our Approach</h4>
+                        <ul>
+                            <li><strong>API Design and Architecture:</strong> Crafting robust and flexible APIs.</li>
+                            <li><strong>Development and Testing:</strong> Ensuring functionality and security through rigorous testing.</li>
+                            <li><strong>Documentation and Support:</strong> Providing comprehensive documentation and continuous support.</li>
+                        </ul>
+    
+                        <p>By leveraging the latest technologies and best practices, our APIs enhance the efficiency of your software solutions and ensure seamless integration.</p>
+                    </div>
+    
+                    <!-- More/Less link to toggle description visibility -->
+                    <a href="#" class="toggle-more">More</a>
                 </div>
-            </section>
+    
+                <!-- Blog Development Block -->
+                <div class="service-item">
+                    <i class="icon-blog" style="font-size: 50px; color: #28a745;"></i>
+                    <h3>Blog Development</h3>
+                    <p class="short-description">We create and develop blogs of any kind to enhance your digital presence.</p>
+    
+                    <!-- Detailed description -->
+                    <div class="detailed-description" style="display: none;">
+                        <h4>Comprehensive Blog Development Solutions</h4>
+                        <p>Our blog development services are designed to help you create and maintain a robust digital presence. We manage everything from blog setup to advanced customization to ensure your blog meets your specific needs and engages your audience effectively.</p>
+    
+                        <h4>Our Expertise</h4>
+                        <ul>
+                            <li><strong>Custom Blog Creation:</strong> Developing blogs tailored to your unique requirements and brand identity.</li>
+                            <li><strong>Design and Layout:</strong> Creating visually appealing and user-friendly blog designs.</li>
+                            <li><strong>Functionality and Features:</strong> Implementing advanced features and functionalities to enhance user experience.</li>
+                            <li><strong>Content Management Systems:</strong> Integrating robust CMS solutions for easy content management and updates.</li>
+                        </ul>
+    
+                        <p>With our expertise, your blog will not only attract visitors but also provide a high-quality experience that keeps them coming back.</p>
+                    </div>
+    
+                    <!-- More/Less link to toggle description visibility -->
+                    <a href="#" class="toggle-more">More</a>
+                </div>
+    
+                <!-- Video Editing Block -->
+                <div class="service-item">
+                    <i class="icon-video-editing" style="font-size: 50px; color: #ff5722;"></i>
+                    <h3>Video Editing</h3>
+                    <p class="short-description">Transforming your raw footage into polished, professional content.</p>
+    
+                    <!-- Detailed description -->
+                    <div class="detailed-description" style="display: none;">
+                        <h4>Overview</h4>
+                        <p>At SitePro Craft, our video editing services are designed to make your footage shine. We provide high-quality editing that enhances the visual and auditory aspects of your videos, ensuring they are engaging and impactful.</p>
+    
+                        <h4>Our Video Editing Services Include</h4>
+                        <p>We offer a range of video editing services, including cutting and trimming, color correction, sound editing, and visual effects. Whether it's a promotional video, a tutorial, or an event highlight, we tailor our services to meet your specific needs and help convey your message effectively.</p>
+                    </div>
+    
+                    <!-- Toggle Link -->
+                    <a href="#" class="toggle-more">More</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Your existing content -->
+    </body>
+    
             
             
         </div>
@@ -538,24 +561,16 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const toggleLinks = document.querySelectorAll('.toggle-more');
-
-        toggleLinks.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const serviceItem = this.closest('.service-item');
-                const detailedDescription = serviceItem.querySelector('.detailed-description');
-
-                if (detailedDescription.style.display === 'none') {
-                    detailedDescription.style.display = 'block';
-                    this.textContent = 'Less'; // Change link text to 'Less' when details are visible
-                } else {
-                    detailedDescription.style.display = 'none';
-                    this.textContent = 'More'; // Change link text back to 'More' when details are hidden
-                }
+        document.querySelectorAll('.toggle-more').forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor behavior
+                const moreContent = this.previousElementSibling; // Select the sibling 'more-content' element
+                moreContent.classList.toggle('show');
+                this.textContent = moreContent.classList.contains('show') ? 'Read less' : 'Read more';
             });
         });
     });
 </script>
+
 
 </html>
