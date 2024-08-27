@@ -317,11 +317,36 @@
         <h2>Our Services</h2>
         <div class="service-grid">
             
-                    <!-- Web Development Block -->
-                    <div class="service-item">
-                        <i class="icon-consulting"></i>
-                        <h3>Web Development</h3>
-                        <p>Expert advice for your business.</p>
+    <!-- Web Development Block -->
+        <div class="service-item">
+         <i class="icon-consulting" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
+         <h3>Web Development</h3>
+         <p class="short-description">Expert advice for your business.</p> 
+
+    <!-- Detailed description -->
+         <div class="detailed-description" style="display: none;">
+          <h4>Overview</h4>
+           <p>At SitePro Craft, our web development services are designed to meet the unique needs of your business. We offer a comprehensive range of solutions that ensure your website is both visually appealing and highly functional.</p>
+
+          <h4>Our Web Development Services Include</h4>
+           <p>We design and develop custom websites tailored to your business needs, ensuring an engaging and responsive user experience. From frontend and backend development to e-commerce solutions and CMS integration, our services cover all aspects of web development. We also focus on SEO and performance optimization to enhance your site’s visibility and functionality.</p>
+
+        <h4>Our Approach</h4>
+        <ul>
+            <li><strong>Custom Design and Development:</strong> Tailored websites designed to reflect your brand and meet your objectives.</li>
+            <li><strong>Responsive Layouts:</strong> Ensuring your site looks great on all devices, from desktops to mobile phones.</li>
+            <li><strong>Performance Optimization:</strong> Enhancing load times and functionality for a smooth user experience.</li>
+            <li><strong>Ongoing Support:</strong> Providing maintenance and updates to keep your website performing optimally.</li>
+        </ul>
+
+        <p>Our goal is to build websites that engage your audience and support your business goals through strategic design and technology.</p>
+    </div>
+
+    <!-- Toggle Link -->
+    <a href="#" class="toggle-more">More</a>
+</div>
+
+
                     </div>
             
                     <!-- API Development Block - Moved Here -->
@@ -495,5 +520,30 @@
             // Toggle full text visibility
 
         });
+
 </script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleLinks = document.querySelectorAll('.toggle-more');
+
+        toggleLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const serviceItem = this.closest('.service-item');
+                const detailedDescription = serviceItem.querySelector('.detailed-description');
+
+                if (detailedDescription.style.display === 'none') {
+                    detailedDescription.style.display = 'block';
+                    this.textContent = 'Less'; // Change link text to 'Less' when details are visible
+                } else {
+                    detailedDescription.style.display = 'none';
+                    this.textContent = 'More'; // Change link text back to 'More' when details are hidden
+                }
+            });
+        });
+    });
+</script>
+
 </html>
