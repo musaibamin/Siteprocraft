@@ -125,58 +125,29 @@
         }
 
         .service-item {
-            position: relative;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: white;
             padding: 20px;
-            background-color: #f9f9f9;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            margin: auto;
-        }
-
-        .service-item h3 {
-            margin-bottom: 10px;
-            font-size: 24px;
-            color: #333;
-        }
-
-        .service-item h4 {
-            font-size: 18px;
-            margin-top: 15px;
-            color: #333;
-        }
-
-        .toggle-more {
-            color: #0078d4;
-            cursor: pointer;
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .toggle-more:hover {
-            text-decoration: underline;
-        }
-
-        .detailed-description ul {
-            margin-top: 10px;
-            padding-left: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
             text-align: left;
-            list-style-type: disc;
+        }
+
+        .service-item i {
+            font-size: 36px;
+            color: #0078d4;
             margin-bottom: 15px;
         }
 
-        .detailed-description p, .short-description {
-            text-align: justify;
+        .service-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-item p {
             font-size: 16px;
-            line-height: 1.6;
             color: #555;
-            margin: 0;
         }
 
         /* About Section */
@@ -311,32 +282,347 @@
             <div class="service-item">
                 <i class="icon-blog" style="font-size: 50px; color: #28a745; margin-bottom: 15px;"></i>
                 <h3>Blog Development</h3>
+                
+                <!-- Short description initially visible -->
                 <p class="short-description">We create and develop blogs of any kind to enhance your digital presence.</p>
+                
+                <!-- Detailed description initially hidden -->
                 <div class="detailed-description" style="display: none;">
                     <h4>Comprehensive Blog Development Solutions</h4>
                     <p>Our blog development services are designed to help you create and maintain a robust digital presence. We manage everything from blog setup to advanced customization to ensure your blog meets your specific needs and engages your audience effectively.</p>
+                    
                     <h4>Our Expertise</h4>
                     <ul>
                         <li><strong>Custom Blog Creation:</strong> Developing blogs tailored to your unique requirements and brand identity.</li>
-                        <li><strong>SEO Optimization:</strong> Ensuring your blog ranks well on search engines to attract more visitors.</li>
-                        <li><strong>Content Management:</strong> Providing tools and training for effective blog content management.</li>
+                        <li><strong>Design and Layout:</strong> Creating visually appealing and user-friendly blog designs.</li>
+                        <li><strong>Functionality and Features:</strong> Implementing advanced features and functionalities to enhance user experience.</li>
+                        <li><strong>Content Management Systems:</strong> Integrating robust CMS solutions for easy content management and updates.</li>
                     </ul>
-                    <h4>Benefits of Our Blog Development Services</h4>
-                    <ul>
-                        <li>Increased online visibility and traffic.</li>
-                        <li>Enhanced audience engagement and interaction.</li>
-                        <li>Improved brand authority and trustworthiness.</li>
-                    </ul>
-                    <p>Whether you are looking to start a new blog or enhance an existing one, our comprehensive services cater to all your blogging needs.</p>
+                    
+                    <p>With our expertise, your blog will not only attract visitors but also provide a high-quality experience that keeps them coming back.</p>
                 </div>
-                <a class="toggle-more" onclick="toggleDescription(this)">Read more</a>
+                
+                <!-- More/Less link to toggle description visibility -->
+                <a href="#" class="toggle-more">More</a>
             </div>
+            
+            <style>
+            .service-item {
+                position: relative;
+                text-align: center; /* Center align heading and icon */
+                display: flex;
+                flex-direction: column; /* Stack children vertically */
+                align-items: center; /* Center align children horizontally */
+                padding: 20px;
+                background-color: #f9f9f9; /* Light grey background */
+                border-radius: 8px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                max-width: 400px; /* Limit the width for a professional layout */
+                margin: auto; /* Center the service item horizontally */
+            }
+            
+            .service-item h3 {
+                margin-bottom: 10px; /* Spacing below the header */
+                font-size: 24px; /* Larger font size for the header */
+                color: #333; /* Darker color for text */
+            }
+            
+            .service-item h4 {
+                font-size: 18px; /* Subheader size */
+                margin-top: 15px; /* Space above subheaders */
+                color: #28a745; /* Match the icon color for branding */
+            }
+            
+            .toggle-more {
+                color: #28a745;
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+                font-weight: bold; /* Make the link bold */
+            }
+            
+            .toggle-more:hover {
+                text-decoration: underline;
+            }
+            
+            .detailed-description ul {
+                margin-top: 10px;
+                padding-left: 20px;
+                text-align: left; /* Align list items to the left */
+                list-style-type: disc; /* Bullet points for the list */
+                margin-bottom: 15px; /* Space below the list */
+            }
+            
+            .detailed-description p, .short-description {
+                text-align: justify; /* Justify text */
+                font-size: 16px; /* Consistent font size */
+                line-height: 1.6; /* Improve readability with line height */
+                color: #555; /* Softer color for body text */
+                margin: 0; /* Remove default margins for consistent spacing */
+            }
+            
+            </style>
+            
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggleLinks = document.querySelectorAll('.toggle-more');
+            
+                toggleLinks.forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default anchor click behavior
+                        const serviceItem = this.closest('.service-item');
+                        const detailedDescription = serviceItem.querySelector('.detailed-description');
+                        const shortDescription = serviceItem.querySelector('.short-description');
+            
+                        if (detailedDescription.style.display === 'none') {
+                            // Show detailed description and update link text to "Less"
+                            detailedDescription.style.display = 'block';
+                            shortDescription.style.display = 'none';
+                            this.textContent = 'Less';
+                        } else {
+                            // Hide detailed description and update link text to "More"
+                            detailedDescription.style.display = 'none';
+                            shortDescription.style.display = 'block';
+                            this.textContent = 'More';
+                        }
+                    });
+                });
+            });
+            </script>
+<div class="service-item">
+    <i class="icon-blog" style="font-size: 50px; color: #28a745; margin-bottom: 15px;"></i>
+    <h3>Blog Development</h3>
+    
+    <!-- Short description initially visible -->
+    <p class="short-description">We create and develop blogs of any kind to enhance your digital presence.</p>
+    
+    <!-- Detailed description initially hidden -->
+    <div class="detailed-description" style="display: none;">
+        <h4>Comprehensive Blog Development Solutions</h4>
+        <p>Our blog development services are designed to help you create and maintain a robust digital presence. We manage everything from blog setup to advanced customization to ensure your blog meets your specific needs and engages your audience effectively.</p>
+        
+        <h4>Our Expertise</h4>
+        <ul>
+            <li><strong>Custom Blog Creation:</strong> Developing blogs tailored to your unique requirements and brand identity.</li>
+            <li><strong>Design and Layout:</strong> Creating visually appealing and user-friendly blog designs.</li>
+            <li><strong>Functionality and Features:</strong> Implementing advanced features and functionalities to enhance user experience.</li>
+            <li><strong>Content Management Systems:</strong> Integrating robust CMS solutions for easy content management and updates.</li>
+        </ul>
+        
+        <p>With our expertise, your blog will not only attract visitors but also provide a high-quality experience that keeps them coming back.</p>
+    </div>
+    
+    <!-- More/Less link to toggle description visibility -->
+    <a href="#" class="toggle-more">More</a>
+</div>
+
+<style>
+.service-item {
+    position: relative;
+    text-align: center; /* Center align heading and icon */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align children horizontally */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px; /* Limit the width for a professional layout */
+    margin: auto; /* Center the service item horizontally */
+}
+
+.service-item h3 {
+    margin-bottom: 10px; /* Spacing below the header */
+    font-size: 24px; /* Larger font size for the header */
+    color: #333; /* Darker color for text */
+}
+
+.service-item h4 {
+    font-size: 18px; /* Subheader size */
+    margin-top: 15px; /* Space above subheaders */
+    color: #28a745; /* Match the icon color for branding */
+}
+
+.toggle-more {
+    color: #28a745;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold; /* Make the link bold */
+}
+
+.toggle-more:hover {
+    text-decoration: underline;
+}
+
+.detailed-description ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    text-align: left; /* Align list items to the left */
+    list-style-type: disc; /* Bullet points for the list */
+    margin-bottom: 15px; /* Space below the list */
+}
+
+.detailed-description p, .short-description {
+    text-align: justify; /* Justify text */
+    font-size: 16px; /* Consistent font size */
+    line-height: 1.6; /* Improve readability with line height */
+    color: #555; /* Softer color for body text */
+    margin: 0; /* Remove default margins for consistent spacing */
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleLinks = document.querySelectorAll('.toggle-more');
+
+    toggleLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default anchor click behavior
+            const serviceItem = this.closest('.service-item');
+            const detailedDescription = serviceItem.querySelector('.detailed-description');
+            const shortDescription = serviceItem.querySelector('.short-description');
+
+            if (detailedDescription.style.display === 'none') {
+                // Show detailed description and update link text to "Less"
+                detailedDescription.style.display = 'block';
+                shortDescription.style.display = 'none';
+                this.textContent = 'Less';
+            } else {
+                // Hide detailed description and update link text to "More"
+                detailedDescription.style.display = 'none';
+                shortDescription.style.display = 'block';
+                this.textContent = 'More';
+            }
+        });
+    });
+});
+</script>
+            
+            
+            </div>
+            <div class="service-item">
+                <i class="icon-api" style="font-size: 50px; color: #007BFF; margin-bottom: 15px;"></i>
+                <h3>API Development</h3>
+                
+                <!-- Short description initially visible -->
+                <p class="short-description">Building robust APIs for seamless integration.</p>
+                
+                <!-- Detailed description initially hidden -->
+                <div class="detailed-description" style="display: none;">
+                    <h4>Overview</h4>
+                    <p>Our APIs are designed to be reliable, scalable, and easy to integrate. We adhere to the highest industry standards to ensure smooth communication between software systems.</p>
+                    
+                    <h4>Our Approach</h4>
+                    <ul>
+                        <li><strong>API Design and Architecture:</strong> Crafting robust and flexible APIs.</li>
+                        <li><strong>Development and Testing:</strong> Ensuring functionality and security through rigorous testing.</li>
+                        <li><strong>Documentation and Support:</strong> Providing comprehensive documentation and continuous support.</li>
+                    </ul>
+                    
+                    <p>By leveraging the latest technologies and best practices, our APIs enhance the efficiency of your software solutions and ensure seamless integration.</p>
+                </div>
+                
+                <!-- More/Less link to toggle description visibility -->
+                <a href="#" class="toggle-more">More</a>
+            </div>
+            
+            <style>
+            .service-item {
+                position: relative;
+                text-align: center; /* Center align heading and icon */
+                display: flex;
+                flex-direction: column; /* Stack children vertically */
+                align-items: center; /* Center align children horizontally */
+                padding: 20px;
+                background-color: #f9f9f9; /* Light grey background */
+                border-radius: 8px; /* Rounded corners */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+                max-width: 400px; /* Limit the width for a professional layout */
+                margin: auto; /* Center the service item horizontally */
+            }
+            
+            .service-item h3 {
+                margin-bottom: 10px; /* Spacing below the header */
+                font-size: 24px; /* Larger font size for the header */
+                color: #333; /* Darker color for text */
+            }
+            
+            .service-item h4 {
+                font-size: 18px; /* Subheader size */
+                margin-top: 15px; /* Space above subheaders */
+                color: #007BFF; /* Match the icon color for branding */
+            }
+            
+            .toggle-more {
+                color: #007BFF;
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+                font-weight: bold; /* Make the link bold */
+            }
+            
+            .toggle-more:hover {
+                text-decoration: underline;
+            }
+            
+            .detailed-description ul {
+                margin-top: 10px;
+                padding-left: 20px;
+                text-align: left; /* Align list items to the left */
+                list-style-type: disc; /* Bullet points for the list */
+                margin-bottom: 15px; /* Space below the list */
+            }
+            
+            .detailed-description p, .short-description {
+                text-align: justify; /* Justify text */
+                font-size: 16px; /* Consistent font size */
+                line-height: 1.6; /* Improve readability with line height */
+                color: #555; /* Softer color for body text */
+                margin: 0; /* Remove default margins for consistent spacing */
+            }
+            
+            </style>
+            
+            <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const toggleLinks = document.querySelectorAll('.toggle-more');
+            
+                toggleLinks.forEach(link => {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault(); // Prevent default anchor click behavior
+                        const serviceItem = this.closest('.service-item');
+                        const detailedDescription = serviceItem.querySelector('.detailed-description');
+                        const shortDescription = serviceItem.querySelector('.short-description');
+            
+                        if (detailedDescription.style.display === 'none') {
+                            // Show detailed description and update link text to "Less"
+                            detailedDescription.style.display = 'block';
+                            shortDescription.style.display = 'none';
+                            this.textContent = 'Less';
+                        } else {
+                            // Hide detailed description and update link text to "More"
+                            detailedDescription.style.display = 'none';
+                            shortDescription.style.display = 'block';
+                            this.textContent = 'More';
+                        }
+                    });
+                });
+            });
+            </script>
+            
+            
         </div>
     </section>
+    
 
     <section id="about" class="about">
         <h2>About Us</h2>
-        <p>At SitePro Craft, we are dedicated to providing top-notch web development and software solutions to help businesses and individuals thrive in the digital world.</p>
+        <p>We are a dedicated team of professionals committed to delivering exceptional results.</p>
     </section>
 
     <section id="contact" class="contact">
@@ -351,7 +637,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 SitePro Craft. All rights reserved.</p>
+            <p>&copy; 2024 SitePro craft. All rights reserved.<a href="Privacy-policy.html"> Privacy and Policy</a> | <a href="Terms-and-conditions.html"> Terms and Conditions</a> | <a href="Cancellation-and-refund.html"> Cancellation and Refund </a> | <a href="Shipping-and-delivery.html"> Shipping nand Delivery </a></p>
             <div class="social-icons">
                 <a href="#"><i class="icon-facebook"></i></a>
                 <a href="#"><i class="icon-twitter"></i></a>
@@ -359,34 +645,55 @@
             </div>
         </div>
     </footer>
+</body>
+
+
+
+    <!-- Scripts -->
 
     <script>
-        function toggleDescription(element) {
-            const description = element.previousElementSibling;
-            if (description.style.display === 'none') {
-                description.style.display = 'block';
-                element.textContent = 'Read less';
-            } else {
-                description.style.display = 'none';
-                element.textContent = 'Read more';
-            }
-        }
-
-        function showContent() {
-            var texts = [
-                "We design and develop your digital presence.",
-                "Crafting high-quality websites and software for businesses.",
-                "Bring your ideas to life with our professional services."
+        document.addEventListener("DOMContentLoaded", function() {
+            const textArray = [
+                "Welcome to SiteProCraft!",
+                "Your trusted partner in web development, software development, and API intergations.",
+                "We bring your ideas to life.",
+                "Creating stunning and functional websites.",
+                "Let's build something great together.",
+                "Crafting sites with passion and precision."
             ];
-            var index = 0;
-            var typedTextElement = document.getElementById("typed-text");
+            let textIndex = 0;
+            let charIndex = 0;
+            const typingSpeed = 80; // typing speed in milliseconds
+            const erasingSpeed = 20; // erasing speed in milliseconds
+            const delayBetweenTexts = 1000; // delay between texts in milliseconds
+            const delayAfterErasing = 500; // delay after erasing in milliseconds
+            const typedTextElement = document.getElementById("typed-text");
 
-            setInterval(function() {
-                typedTextElement.textContent = texts[index];
-                index = (index + 1) % texts.length;
-            }, 3000); 
-        }
-        showContent();
-    </script>
-</body>
+            function type() {
+                if (charIndex < textArray[textIndex].length) {
+                    typedTextElement.textContent += textArray[textIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(type, typingSpeed);
+                } else {
+                    setTimeout(erase, delayBetweenTexts);
+                }
+            }
+
+            function erase() {
+                if (charIndex > 0) {
+                    typedTextElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(erase, erasingSpeed);
+                } else {
+                    textIndex = (textIndex + 1) % textArray.length;
+                    setTimeout(type, delayAfterErasing);
+                }
+            }
+
+            type(); // start the typing effect
+
+            // Toggle full text visibility
+
+        });
+</script>
 </html>
