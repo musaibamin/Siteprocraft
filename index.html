@@ -14,30 +14,30 @@
             padding: 0;
             box-sizing: border-box;
         }
-    
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             background-color: #f5f5f5;
-            line-height: 1.6; 
+            line-height: 1.6;
         }
-    
+
         a {
             text-decoration: none;
             color: #0078d4;
         }
-    
+
         ul {
             list-style: none;
         }
-    
+
         /* Header */
         header {
             background-color: #fff;
             border-bottom: 1px solid #e1e1e1;
             padding: 15px 20px;
         }
-    
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -45,35 +45,35 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-    
+
         .logo {
             font-size: 24px;
             font-weight: bold;
             color: #171717;
             font-family: 'Oleo Script', system-ui;
         }
-    
+
         .nav-links {
             display: flex;
             gap: 20px;
         }
-    
+
         .nav-links a {
             font-size: 16px;
             padding: 10px;
             transition: color 0.3s ease;
         }
-    
+
         .nav-links a:hover {
             color: #005a9e;
         }
-    
+
         .search-bar input {
             padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
         }
-    
+
         /* Hero Section */
         .hero {
             background-color: #0078d4;
@@ -81,17 +81,17 @@
             padding: 100px 20px;
             text-align: center;
         }
-    
+
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
         }
-    
+
         .hero p {
             font-size: 20px;
             margin-bottom: 30px;
         }
-    
+
         .btn-primary {
             background-color: white;
             color: #0078d4;
@@ -100,37 +100,37 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
-    
+
         .btn-primary:hover {
             background-color: #e1e1e1;
         }
-    
+
         /* Services Section */
         .services {
             padding: 60px 20px;
             text-align: center;
         }
-    
+
         .services h2 {
             font-size: 36px;
             margin-bottom: 40px;
             color: #333;
         }
-    
+
         .service-grid {
             display: flex;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
         }
-    
+
         .service-container {
-            display: flex; /* Use Flexbox to create a row layout */
-            justify-content: space-between; /* Distribute space evenly between the items */
-            flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-            gap: 20px; /* Space between service items */
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-    
+
         .service-item {
             background-color: white;
             padding: 20px;
@@ -138,83 +138,94 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: left;
-            flex: 1; /* Make each item take equal space */
-            min-width: 250px; /* Minimum width for each service item */
-            max-width: 300px; /* Maximum width for each service item */
-            border: 1px solid #ddd; /* Optional: Add border for separation */
-            padding: 15px; /* Padding inside each service block */
-            box-sizing: border-box; /* Include padding and border in width calculation */
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            transition: background-color 0.3s, transform 0.3s;
         }
-    
+
+        .service-item:hover {
+            background-color: #f0f8ff;
+            transform: translateY(-5px);
+        }
+
         .service-item i {
             font-size: 36px;
             color: #0078d4;
             margin-bottom: 15px;
             display: block;
-            margin: 0 auto 15px auto; /* Center the icons and add margin below */
+            margin: 0 auto 15px auto;
         }
-    
+
         .service-item h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #333;
         }
-    
+
         .service-item p,
         .service-item ul,
         .service-item h4 {
             font-size: 16px;
             color: #555;
-            text-align: justify; /* Justify text in paragraphs, lists, and headers */
+            text-align: justify;
         }
-    
-        /* Ensure the 'More' links don't get in the way */
+
         .toggle-more {
             display: block;
             text-align: center;
             margin-top: 10px;
+            cursor: pointer;
+            color: #0078d4;
         }
-    
+
+        /* Service details hidden initially */
+        .service-details {
+            display: none;
+        }
+
         /* About Section */
         .about {
             padding: 60px 20px;
             text-align: center;
             background-color: #f5f5f5;
         }
-    
+
         .about h2 {
             font-size: 36px;
             margin-bottom: 20px;
             color: #333;
         }
-    
+
         .about p {
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto;
             color: #555;
         }
-    
-         /* Work Showcase */
-         .work-showcase {
+
+        /* Work Showcase */
+        .work-showcase {
             padding: 60px 20px;
             text-align: center;
             background-color: #fff;
         }
-    
+
         .work-showcase h2 {
             font-size: 36px;
             margin-bottom: 40px;
             color: #333;
         }
-    
+
         .work-gallery {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
-    
+
         .work-item {
             background-color: #f9f9f9;
             padding: 20px;
@@ -223,37 +234,37 @@
             width: 300px;
             text-align: left;
         }
-    
+
         .work-item img {
             width: 100%;
             height: auto;
             border-radius: 8px;
             margin-bottom: 15px;
         }
-    
+
         .work-item h3 {
             font-size: 24px;
             margin-bottom: 10px;
             color: #333;
         }
-    
+
         .work-item p {
             font-size: 16px;
             color: #555;
         }
-    
+
         /* Contact Section */
         .contact {
             padding: 60px 20px;
             text-align: center;
         }
-    
+
         .contact h2 {
             font-size: 36px;
             margin-bottom: 40px;
             color: #333;
         }
-    
+
         .contact form {
             max-width: 600px;
             margin: 0 auto;
@@ -261,7 +272,7 @@
             flex-direction: column;
             gap: 20px;
         }
-    
+
         .contact form input,
         .contact form textarea {
             padding: 15px;
@@ -269,12 +280,12 @@
             border-radius: 4px;
             font-size: 16px;
         }
-    
+
         .contact form textarea {
             resize: none;
             height: 150px;
         }
-    
+
         .contact form button {
             background-color: #0078d4;
             color: white;
@@ -285,11 +296,11 @@
             border: none;
             cursor: pointer;
         }
-    
+
         .contact form button:hover {
             background-color: #005a9e;
         }
-    
+
         /* Footer */
         footer {
             background-color: #333;
@@ -297,23 +308,22 @@
             padding: 20px;
             text-align: center;
         }
-    
+
         .footer-content p {
             margin-bottom: 10px;
         }
-    
+
         .social-icons a {
             margin: 0 10px;
             font-size: 20px;
             color: white;
             transition: color 0.3s ease;
         }
-    
+
         .social-icons a:hover {
             color: #0078d4;
         }
     </style>
-    
 </head>
 <body>
     <header>
@@ -331,246 +341,120 @@
         </nav>
     </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to SitePro Craft!</h1>
-            <p id ="typed-text">Solutions tailored to your needs.</p>
-            <a href="#services" class="btn-primary">Learn More</a>
-        </div>
+    <section class="hero" id="home">
+        <h1>Websites and Software for Businesses and Individuals</h1>
+        <p>Your one-stop solution for digital services.</p>
+        <a href="#contact" class="btn-primary">Get Started</a>
     </section>
-    <body>
-        
-        <!-- Service Section -->
-        <section>
-            <div class="service-container">
-                <!-- Web Development Block -->
-                <div class="service-item">
-                    <i class="icon-consulting" style="font-size: 50px; color: #007BFF;"></i>
-                    <h3>Web Development</h3>
-                    <p class="short-description">Expert advice for your business.</p> 
-    
-                    <!-- Detailed description -->
-                    <div class="detailed-description" style="display: none;">
-                        <h4>Overview</h4>
-                        <p>At SitePro Craft, our web development services are designed to meet the unique needs of your business. We offer a comprehensive range of solutions that ensure your website is both visually appealing and highly functional.</p>
-    
-                        <h4>Our Web Development Services Include</h4>
-                        <p>We design and develop custom websites tailored to your business needs, ensuring an engaging and responsive user experience. From frontend and backend development to e-commerce solutions and CMS integration, our services cover all aspects of web development. We also focus on SEO and performance optimization to enhance your site’s visibility and functionality.</p>
-    
-                        <h4>Our Approach</h4>
-                        <ul>
-                            <li><strong>Custom Design and Development:</strong> Tailored websites designed to reflect your brand and meet your objectives.</li>
-                            <li><strong>Responsive Layouts:</strong> Ensuring your site looks great on all devices, from desktops to mobile phones.</li>
-                            <li><strong>Performance Optimization:</strong> Enhancing load times and functionality for a smooth user experience.</li>
-                            <li><strong>Ongoing Support:</strong> Providing maintenance and updates to keep your website performing optimally.</li>
-                        </ul>
-    
-                        <p>Our goal is to build websites that engage your audience and support your business goals through strategic design and technology.</p>
-                    </div>
-    
-                    <!-- Toggle Link -->
-                    <a href="#" class="toggle-more">More</a>
-                </div>
-    
-                <!-- API Development Block -->
-                <div class="service-item">
-                    <i class="icon-api" style="font-size: 50px; color: #007BFF;"></i>
-                    <h3>API Development</h3>
-                    <p class="short-description">Building robust APIs for seamless integration.</p>
-    
-                    <!-- Detailed description -->
-                    <div class="detailed-description" style="display: none;">
-                        <h4>Overview</h4>
-                        <p>Our APIs are designed to be reliable, scalable, and easy to integrate. We adhere to the highest industry standards to ensure smooth communication between software systems.</p>
-    
-                        <h4>Our Approach</h4>
-                        <ul>
-                            <li><strong>API Design and Architecture:</strong> Crafting robust and flexible APIs.</li>
-                            <li><strong>Development and Testing:</strong> Ensuring functionality and security through rigorous testing.</li>
-                            <li><strong>Documentation and Support:</strong> Providing comprehensive documentation and continuous support.</li>
-                        </ul>
-    
-                        <p>By leveraging the latest technologies and best practices, our APIs enhance the efficiency of your software solutions and ensure seamless integration.</p>
-                    </div>
-    
-                    <!-- More/Less link to toggle description visibility -->
-                    <a href="#" class="toggle-more">More</a>
-                </div>
-    
-                <!-- Blog Development Block -->
-                <div class="service-item">
-                    <i class="icon-blog" style="font-size: 50px; color: #28a745;"></i>
-                    <h3>Blog Development</h3>
-                    <p class="short-description">We create and develop blogs of any kind to enhance your digital presence.</p>
-    
-                    <!-- Detailed description -->
-                    <div class="detailed-description" style="display: none;">
-                        <h4>Comprehensive Blog Development Solutions</h4>
-                        <p>Our blog development services are designed to help you create and maintain a robust digital presence. We manage everything from blog setup to advanced customization to ensure your blog meets your specific needs and engages your audience effectively.</p>
-    
-                        <h4>Our Expertise</h4>
-                        <ul>
-                            <li><strong>Custom Blog Creation:</strong> Developing blogs tailored to your unique requirements and brand identity.</li>
-                            <li><strong>Design and Layout:</strong> Creating visually appealing and user-friendly blog designs.</li>
-                            <li><strong>Functionality and Features:</strong> Implementing advanced features and functionalities to enhance user experience.</li>
-                            <li><strong>Content Management Systems:</strong> Integrating robust CMS solutions for easy content management and updates.</li>
-                        </ul>
-    
-                        <p>With our expertise, your blog will not only attract visitors but also provide a high-quality experience that keeps them coming back.</p>
-                    </div>
-    
-                    <!-- More/Less link to toggle description visibility -->
-                    <a href="#" class="toggle-more">More</a>
-                </div>
-    
-                <!-- Video Editing Block -->
-                <div class="service-item">
-                    <i class="icon-video-editing" style="font-size: 50px; color: #ff5722;"></i>
-                    <h3>Video Editing</h3>
-                    <p class="short-description">Transforming your raw footage into polished, professional content.</p>
-    
-                    <!-- Detailed description -->
-                    <div class="detailed-description" style="display: none;">
-                        <h4>Overview</h4>
-                        <p>At SitePro Craft, our video editing services are designed to make your footage shine. We provide high-quality editing that enhances the visual and auditory aspects of your videos, ensuring they are engaging and impactful.</p>
-    
-                        <h4>Our Video Editing Services Include</h4>
-                        <p>We offer a range of video editing services, including cutting and trimming, color correction, sound editing, and visual effects. Whether it's a promotional video, a tutorial, or an event highlight, we tailor our services to meet your specific needs and help convey your message effectively.</p>
-                    </div>
-    
-                    <!-- Toggle Link -->
-                    <a href="#" class="toggle-more">More</a>
-                </div>
-            </div>
-        </section>
-    
-        <!-- Your existing content -->
-    </body>
-    
-            
-            
-        </div>
-    </section>
-    
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>At SitePro Craft, we are passionate creators who bring your digital visions to life. We excel in designing intuitive websites and robust APIs, while also crafting engaging content. Our mission is to empower your brand with cutting-edge digital solutions.</p>
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Creating stunning websites with the latest technologies.</p>
+                <p class="service-details">We specialize in creating responsive, user-friendly websites that are optimized for performance and SEO. From landing pages to full-scale eCommerce sites, we've got you covered.</p>
+                <a href="#" class="toggle-more">Read more</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-network-wired"></i>
+                <h3>API Development</h3>
+                <p>Designing robust APIs for seamless integration.</p>
+                <p class="service-details">Our API development services include RESTful APIs, third-party API integration, and custom API solutions. We ensure secure and scalable API architectures.</p>
+                <a href="#" class="toggle-more">Read more</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-pencil-alt"></i>
+                <h3>Blog Development</h3>
+                <p>Developing engaging and interactive blogs.</p>
+                <p class="service-details">We create blogs that are not only aesthetically pleasing but also easy to manage and optimized for SEO. Our services include custom themes, plugin development, and content strategy.</p>
+                <a href="#" class="toggle-more">Read more</a>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-video"></i>
+                <h3>Video Editing</h3>
+                <p>Professional video editing to enhance your content.</p>
+                <p class="service-details">Our video editing services cover everything from basic cuts to complex editing, including motion graphics and visual effects. We make sure your videos captivate your audience.</p>
+                <a href="#" class="toggle-more">Read more</a>
+            </div>
+        </div>
     </section>
-    <section id="work-showcase" class="work-showcase">
-        <h2>Work Showcase</h2>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>At SitePro Craft, we are dedicated to delivering top-quality digital services to help your business thrive online. Our team of experienced professionals is passionate about technology and committed to providing personalized solutions tailored to your unique needs.</p>
+    </section>
+
+    <section class="work-showcase" id="work">
+        <h2>Our Work</h2>
         <div class="work-gallery">
             <div class="work-item">
-                <img src="path/to/project1.jpg" alt="Project 1">
-                <h3>Project Title 1</h3>
-                <p>Brief description of the project.</p>
+                <img src="https://via.placeholder.com/300" alt="Work Sample 1">
+                <h3>Project One</h3>
+                <p>A description of the first project showcasing our expertise in web development and design.</p>
             </div>
             <div class="work-item">
-                <img src="path/to/project2.jpg" alt="Project 2">
-                <h3>Project Title 2</h3>
-                <p>Brief description of the project.</p>
+                <img src="https://via.placeholder.com/300" alt="Work Sample 2">
+                <h3>Project Two</h3>
+                <p>Details about another successful project, emphasizing our skills in digital marketing and strategy.</p>
             </div>
             <div class="work-item">
-                <img src="path/to/project3.jpg" alt="Project 3">
-                <h3>Project Title 3</h3>
-                <p>Brief description of the project.</p>
+                <img src="https://via.placeholder.com/300" alt="Work Sample 3">
+                <h3>Project Three</h3>
+                <p>Overview of a project focused on graphic design and branding for a prominent client.</p>
             </div>
-            <!-- Add more work items as needed -->
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea placeholder="Your Message"></textarea>
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
-
-    <div class="footer-content">
-     
-    </div>
-
-        <div class="footer-content"><p>Email: <a href="mailto:contact@siteprocraft.com">contact@siteprocraft.com</a> | Address: NH1 Baramulla Road, Sopore, Jammu and Kashmir 193201</p>
-
-            <p>&copy; 2024 SitePro craft. All rights reserved.<a href="Privacy-policy.html"> Privacy and Policy</a> | <a href="Terms-and-conditions.html"> Terms and Conditions</a> | <a href="Cancellation-and-refund.html"> Cancellation and Refund </a> | <a href="Shipping-and-delivery.html"> Shipping and Delivery </a></p>
+        <div class="footer-content">
+            <p>&copy; 2024 SitePro Craft. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy and Policy</a> |
+                <a href="#">Terms and Conditions</a> |
+                <a href="#">Cancellation and Refund</a> |
+                <a href="#">Shipping and Delivery</a>
+            </div>
+            <p>contact@siteprocraft.com</p>
+            <p>NH1 Baramulla Road, Jammu and Kashmir 193201</p>
             <div class="social-icons">
-                <a href="#"><i class="icon-facebook"></i></a>
-                <a href="#"><i class="icon-twitter"></i></a>
-                <a href="#"><i class="icon-linkedin"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
-</body>
-
-
-
-    <!-- Scripts -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const textArray = [
-                "Welcome to SiteProCraft!",
-                "Your trusted partner in web development, software development, and API intergations.",
-                "We bring your ideas to life.",
-                "Creating stunning and functional websites.",
-                "Let's build something great together.",
-                "Crafting sites with passion and precision."
-            ];
-            let textIndex = 0;
-            let charIndex = 0;
-            const typingSpeed = 80; // typing speed in milliseconds
-            const erasingSpeed = 20; // erasing speed in milliseconds
-            const delayBetweenTexts = 1000; // delay between texts in milliseconds
-            const delayAfterErasing = 500; // delay after erasing in milliseconds
-            const typedTextElement = document.getElementById("typed-text");
-
-            function type() {
-                if (charIndex < textArray[textIndex].length) {
-                    typedTextElement.textContent += textArray[textIndex].charAt(charIndex);
-                    charIndex++;
-                    setTimeout(type, typingSpeed);
-                } else {
-                    setTimeout(erase, delayBetweenTexts);
-                }
-            }
-
-            function erase() {
-                if (charIndex > 0) {
-                    typedTextElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(erase, erasingSpeed);
-                } else {
-                    textIndex = (textIndex + 1) % textArray.length;
-                    setTimeout(type, delayAfterErasing);
-                }
-            }
-
-            type(); // start the typing effect
-
-            // Toggle full text visibility
-
-        });
-
-</script>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('.toggle-more').forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                const moreContent = this.previousElementSibling; // Select the sibling 'more-content' element
-                moreContent.classList.toggle('show');
-                this.textContent = moreContent.classList.contains('show') ? 'Read less' : 'Read more';
+        // JavaScript to toggle the visibility of the service details
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggleLinks = document.querySelectorAll('.toggle-more');
+            toggleLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var serviceDetails = this.previousElementSibling;
+                    serviceDetails.classList.toggle('show-details');
+                    this.textContent = serviceDetails.classList.contains('show-details') ? 'Read less' : 'Read more';
+                });
             });
         });
-    });
-</script>
 
-
+        // Toggle class for service details
+        var style = document.createElement('style');
+        style.innerHTML = '.service-details { display: none; } .show-details { display: block; }';
+        document.head.appendChild(style);
+    </script>
+</body>
 </html>
