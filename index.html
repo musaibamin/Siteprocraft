@@ -251,9 +251,14 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             width: 300px;
             text-align: left;
-            transition: background-color 0.3s, transform 0.3s;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             border: 1px solid #ddd;
             box-sizing: border-box;
+        }
+
+        .work-iteam.higlight{
+            background-color: #e0f7fa;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .work-iteam:hover{
@@ -495,5 +500,24 @@
         style.innerHTML = '.service-details { display: none; } .show-details { display: block; }';
         document.head.appendChild(style);
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var workItems = document.querySelectorAll('.work-item');
+
+        workItems.forEach(function(item) {
+            item.addEventListener('mouseover', function() {
+                workItems.forEach(function(i) {
+                    i.classList.remove('highlight'); // Remove highlight from all items
+                });
+                this.classList.add('highlight'); // Add highlight to the current item
+            });
+
+            item.addEventListener('mouseout', function() {
+                this.classList.remove('highlight'); // Remove highlight when mouse leaves
+            });
+        });
+    });
+</script>
 </body>
 </html>
