@@ -363,14 +363,14 @@ nav {
 
         }
 
-        /* Styling for success and error messages */
+       
         #feedbackMessage {
           font-size: 16px;
-          display: none; /* Hidden by default */
+          display: none; 
         }
 
         .success {
-          color: green;
+           color: green;
         }
 
         .error {
@@ -574,14 +574,15 @@ nav {
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-    
-            
-            <div id="feedbackMessage" style="margin-top: 15px;"></div>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" id="submitBtn">Send Message</button>
+        
+            <!-- Feedback Message -->
+            <div id="feedbackMessage"></div>
         </form>
+        
     </section>
     
 
@@ -673,6 +674,42 @@ nav {
 
         });
 
+</script>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission to server
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let message = document.getElementById('message').value;
+        let feedbackMessage = document.getElementById('feedbackMessage');
+
+        // Clear previous messages
+        feedbackMessage.classList.remove('success', 'error');
+        feedbackMessage.innerHTML = '';
+
+        // Validate that fields are filled
+        if (name === '' || email === '' || message === '') {
+            feedbackMessage.classList.add('error');
+            feedbackMessage.innerHTML = 'First fill up the credentials.';
+            feedbackMessage.style.display = 'block';
+            return;
+        }
+
+        // Validate email format
+        let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+        if (!emailPattern.test(email)) {
+            feedbackMessage.classList.add('error');
+            feedbackMessage.innerHTML = 'Fill the correct email.';
+            feedbackMessage.style.display = 'block';
+            return;
+        }
+
+        // If everything is valid, show success message
+        feedbackMessage.classList.add('success');
+        feedbackMessage.innerHTML = 'Message sent successfully. You will be answered shortly.';
+        feedbackMessage.style.display = 'block';
+    });
 </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
